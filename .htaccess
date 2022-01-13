@@ -1,0 +1,45 @@
+# Activation du module de réécriture d'URL
+
+RewriteEngine On
+
+# RewriteRule URL_A_REECRIRE URL_REECRITE
+#
+# RewriteRule indique que la ligne définit une règle de réécriture
+# URL_A_REECRIRE : URL de la requête reçue, sans existence physique sur le serveur
+# URL_REECRITE : URL telle qu’elle sera appelée en interne sur le serveur
+
+RewriteRule ^([a-zA-Z0-9\-\/\_]*)$ index.php?p=$1
+
+# ^([a-zA-Z0-9\-\/\_]*)$
+
+# ^   : indique le début de l'expression traitée (premier caractère)
+# ()  : parenthèses capturantes : tout ce qui est # "capturé" (qui correspond à 
+# l'expression) alimente la variable $1. 
+# $2 si il y a une 2eme paire de parenthèses
+# $3 si il y a une 3eme paire de parenthèses, etc 
+# []  : classe de caractère : indique quels sont les caractères que l'on prend en compte
+# [expression] représente 1 caractère qui appartient à la classe (respecte l'expression)  
+# a-z : lettres minuscules
+# A-Z : lettres majuscules
+# 0-9 : chiffres
+# \-  : le caractère `-` échappé avecv `\`
+# \/  : le caractère `/` échappé avecv `\`
+# \_  : le caractère `_` échappé avecv `\`
+# *   : quantificateur : indique que l'on prend en compte tous les caractères (0 à n fois)
+# on peut également utiliser d'autres quantificateurs :
+# ? : 0 ou 1 fois
+# + : 1 à n fois
+# * : 0, 1 ou plus
+# {x} : x foix
+# {x,y} : x à y fois
+# $   : indique la fin de l'expression traitée (dernier caractère)
+
+# index.php?p=$1 : URL qui sera traitée par le serveur
+# index.php : script qui sera appelé
+# ?p= : avec le paramètre `p` (méthode GET => récupérable avec $_GET['p'])
+# $1 : contenu de la première capture - première paire de paranthèses
+
+# La requête htpp://localhost/lessons/modify/12 deviendra http://localhost/index.php?p=lessons/modify/12
+
+# Pour info : https://buzut.net/la-puissance-des-regex/
+
