@@ -35,52 +35,52 @@
 
     <div class="grid-item">
       <div class="grid-docu">
-        <div><a href="">liste des Auditeurs</a></div>
-        <div><a href="">recherche Auditeur</a></div>
-        <div><a href="">ajouter un Auditeur</a></div>
+        <div><a href="auditeur/list">liste des Auditeurs</a></div>
+        <div><a href="auditeur/rech">recherche Auditeur</a></div>
+        <div><a href="auditeur/add">ajouter un Auditeur</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des formateurs</a></div>
-        <div><a href="">recherche formateur</a></div>
-        <div><a href="">ajouter un formateur</a></div>
+        <div><a href="formateur/list">liste des formateurs</a></div>
+        <div><a href="formateur/rech">recherche formateur</a></div>
+        <div><a href="formateur/add">ajouter un formateur</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des Managers</a></div>
-        <div><a href="">recherche manager</a></div>
-        <div><a href="">ajouter un manager</a></div>
+        <div><a href="manager/list">liste des Managers</a></div>
+        <div><a href="manager/rech">recherche manager</a></div>
+        <div><a href="manager/add">ajouter un manager</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des Administrateurs</a></div>
-        <div><a href="">ajouter un Administrateur</a></div>
+        <div><a href="admin/list">liste des Administrateurs</a></div>
+        <div><a href="admin/add">ajouter un Administrateur</a></div>
       </div>
     </div>
 
     <div class="grid-item">
       <div class="grid-docu">
-        <div><a href="">liste des Documents</a></div>
-        <div><a href="">recherche de documents</a></div>
-        <div><a href="">ajouter un document</a></div>
+        <div><a href="docu/list">liste des Documents</a></div>
+        <div><a href="docu/rech">recherche de documents</a></div>
+        <div><a href="docu/add">ajouter un document</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des sections</a></div>
-        <div><a href="">recherche de sections</a></div>
-        <div><a href="">ajouter une section</a></div>
+        <div><a href="section/list">liste des sections</a></div>
+        <div><a href="section/rech">recherche de sections</a></div>
+        <div><a href="section/add">ajouter une section</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des themes</a></div>
-        <div><a href="">recherche de themes</a></div>
-        <div><a href="">ajouter un theme</a></div>
+        <div><a href="theme/list">liste des themes</a></div>
+        <div><a href="theme/rech">recherche de themes</a></div>
+        <div><a href="theme/add">ajouter un theme</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="">liste des rubriques</a></div>
-        <div><a href="">recherche de rubriques</a></div>
-        <div><a href="">ajouter une rubrique</a></div>
+        <div><a href="rubrik/list">liste des rubriques</a></div>
+        <div><a href="rubrik/rech">recherche de rubriques</a></div>
+        <div><a href="rubrik/add">ajouter une rubrique</a></div>
       </div>
     </div>
   </div>
