@@ -1,0 +1,164 @@
+@font-face {
+   font-family: 'Roboto';
+   src: url('Roboto-ThinItalic-webfont.eot');
+   src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-ThinItalic-webfont.woff') format('woff'),
+        url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+        url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); (under the Apache Software License). 
+   font-weight: 200;
+   font-style: italic;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+}
+
+p {
+   color: #283891;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #283891;
+}
+
+.title-sm {
+   font-size: 16px;
+   letter-spacing: 1px;
+}
+
+a {
+   font-weight: 700;
+   transition: all 0.4s ease;
+   text-decoration: none;
+}
+
+small {
+   font-size: 12px;
+   letter-spacing: 2px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+section {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   height: 800px;
+}
+
+
+/*navbar*/
+header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   /* height: auto; */
+   background-color: #6d9edd;
+   box-shadow: 0 1px 20px rgb(167, 165, 165);
+   padding: 10px 7%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+}
+
+header .navbar ul {
+   list-style: none;
+   margin: 0;
+}
+
+header .navbar ul li {
+   position: relative;
+   float: left;
+}
+
+header .navbar ul li a {
+   font-size: 16px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   padding: 0 30px;
+   color: #fff;
+   text-transform: uppercase;
+   display: block;
+}
+
+header .navbar ul li a:hover {
+color: #283891;
+}
+
+header .navbar ul li ul {
+   position:fixed;
+   /* left: 0; */
+   width: 20%;
+   height: 100px;
+   background-color: #99e0c5;
+   display: none;
+   z-index: 1400;
+   border-radius: 4px;
+}
+
+header .navbar ul li ul li {
+   width: 100%;
+   height: 30px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+header .navbar ul li ul li ul {
+   left: 200px;
+   top: 0;
+}
+
+header .navbar ul li:hover > ul {
+   display: initial;
+}
+
+header .social-icons a {
+   color: #fff;
+   font-size: 30px;
+   padding-left: 30px;
+}
+
+header .social-icons a:hover {
+   color: #283891;
+}
+
+/*footer*/
+footer {
+   background-color: #aee2ce;
+   background: linear-gradient(#80a6d8, #aee2ce, #99e0c5);
+}
+
+.footer-top {
+   padding-top: 80px;
+   padding-bottom: 30px;
+}
+
+.footer-bottom {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-links a,
+footer .social-icons a {
+   color: #3c4a70;
+}
+
+footer .social-icons a {
+   font-size: 30px;
+   color: #283891;
+}
+
+footer .footer-links a {
+   display: block;
+   font-weight: 400;
+   color: #283891;
+}
+
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+   color: #6295D9;
+}

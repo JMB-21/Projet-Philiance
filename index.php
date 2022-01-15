@@ -3,6 +3,7 @@
 use App\Controllers\Controller;
 
 /**
+ * Mise à jour
  * Ce script tient lieu de router pour l'application.
  * 
  * Il est appelé à chaque requête (voir fichier .htaccess)

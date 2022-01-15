@@ -11,12 +11,12 @@
    <title>Philiance Formation | Médico-Social</title>
  
  <!--====== Favicon Icon ======-->
- <link rel="shortcut icon" href="./img/favicon.png" type="image">
+ <link rel="shortcut icon" href="././assets/img/favicon.png" type="image">
 
  <!--====== Link ======-->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
- <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="./assets/css/style-s.css">
 
 <!-- font awesome cdn link  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -29,7 +29,9 @@
 
 <header class="header">
 
-   <a href="#" class="logo"><img src="./img/logo_Philiance_formation2.png" alt="Logo Philiance Formation" width="200px"></a>
+   <a href="#" class="logo"><img src="./assets/img/logo_Philiance_formation2.png" alt="Logo Philiance Formation" width="200px"></a>
+
+   <!-- <a href="#" class="logo"><img src="assets/img/logo_Philiance_formation2.png" alt="Logo Philiance Formation" width="200px"></a> -->
 
     <nav class="navbar">
         <div id="close-navbar" class="fas fa-times"></div>
@@ -55,31 +57,31 @@
     <div class="box-container">
  
        <div class="box">
-          <img src="./img/teacher-6.png" alt="">
+          <img="././assets/img/teacher-6.png" alt="">
           <h3>ALIMENTATION</h3>
           <p>12 modules</p>
        </div>
  
        <div class="box">
-          <img src="./img/teacher-2.png" alt="">
+          <img="././assets/img/teacher-2.png" alt="">
           <h3>BIEN-TRAITANCE</h3>
           <p>12 modules</p>
        </div>
  
        <div class="box">
-          <img src="./img/teacher-3.png" alt="">
+          <img="././assets/img/teacher-3.png" alt="">
           <h3>COMMUNICATION</h3>
           <p>12 modules</p>
        </div>
  
        <div class="box">
-          <img src="./img/teacher-4.png" alt="">
+          <img="././assets/img/teacher-4.png" alt="">
           <h3>ÉTHIQUE</h3>
           <p>12 modules</p>
        </div>
  
        <div class="box">
-          <img src="./img/teacher-5.png" alt="">
+          <img="././assets/img/teacher-5.png" alt="">
           <h3>HYGIÈNE</h3>
           <p>12 modules</p>
        </div>
@@ -97,7 +99,7 @@
    <div class="box-container">
 
       <div class="box">
-        <img src="./img/logo_Philiance_formation2.png" alt="Logo Philiance Formation" width="150px">
+        <img="././assets/img/logo_Philiance_formation2.png" alt="Logo Philiance Formation" width="150px">
          <div class="share"><br>
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
