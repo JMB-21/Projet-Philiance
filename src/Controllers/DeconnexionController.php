@@ -11,7 +11,13 @@ use App\Controllers\Controller;
 
             public function index() {
 
-                    $template="home/deconnexion";
+                if (isset($_SESSION["newsession"])){ 
+                        session_unset();
+                        session_destroy();                                 
+                }    
+
+                // $template="home/deconnexion";
+                $template="home/homepage";
                     $this->render($template);
                
             }

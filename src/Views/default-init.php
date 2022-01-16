@@ -29,7 +29,7 @@
         ?>
     </header> -->
 
-     <?=require ROOT . '/src/Views/header.html';?>
+     <!-- <?=require ROOT . '/src/Views/header.html';?> -->
 
     <hr>
     <div class="container">
