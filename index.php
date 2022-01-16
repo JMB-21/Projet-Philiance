@@ -66,7 +66,7 @@ if(empty($params[0])) {
  * => on attribue une action "par défaut" (par exemple la liste des entités) 
  */
 if(empty($params[1])) {
-    $action = 'index';
+    $action = 'index';  
 } else {
     $action = $params[1]; 
 }
@@ -95,7 +95,7 @@ session_start();
 
  if (isset($_SESSION["newsession"])){      
 
-     // echo "<br>...Session : ";
+    //  echo "<br>...Session : ";
     // var_dump ($_SESSION);
     // echo "<br>";
 
@@ -103,7 +103,8 @@ session_start();
         // echo "method_exists";
         $call = new $controller();        
         $call->$action(); 
-    } else {    
+    } else {   
+              
         require ROOT . '/src/Views/404.php';
     }    
  }else{
