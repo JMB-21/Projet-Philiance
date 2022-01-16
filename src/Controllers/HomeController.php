@@ -39,6 +39,7 @@ class HomeController extends Controller {
     public function connexion() {
 
         $role ="";
+        // si le formulaire de connexion a été rempli
         if (isset($_POST["pseudo"])){ 
 
             // On cherche sur l'utilisateur a bien rentré son mdp 
