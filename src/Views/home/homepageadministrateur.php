@@ -60,9 +60,9 @@
 
     <div class="grid-item">
       <div class="grid-docu">
-        <div><a href="docu/liste">liste des Documents</a></div>
-        <div><a href="docu/rech">recherche de documents</a></div>
-        <div><a href="docu/add">ajouter un document</a></div>
+        <div><a href="document/liste">liste des Documents</a></div>
+        <div><a href="document/rech">recherche de documents</a></div>
+        <div><a href="document/add">ajouter un document</a></div>
       </div>
 
       <div class="grid-docu">

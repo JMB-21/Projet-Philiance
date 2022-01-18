@@ -1,0 +1,251 @@
+
+/*------------Categories--------------*/
+.intro {
+    margin-top: 5em;
+}
+
+p.text-center {
+    margin-bottom: 5em;
+}
+
+.img-pdf {
+    background: #6295D9;
+    padding: 12px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+  .img-pdf img, .tile img{
+    width: 15%;
+}
+
+.title-container {
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #6295D9;
+    margin-bottom: 1.5em ;
+}
+.title-detail-container {
+    padding: 24px;
+    text-align: center;    
+    height: 195px;
+}
+.title-detail-container h3{
+    text-transform:capitalize;
+
+}
+.title-container a, .modifSup a {
+    text-decoration: none;
+    color: white;
+}
+.title-container a:hover, .modifSup .btn-success{
+    color: #0460D9;
+}
+.spacer {
+    margin-bottom: 2em;
+}
+
+.support_video {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+.title-container .btn-success, .modifSup .btn-success {
+    color: #fff;
+    background-color: #83A603 !important;
+    border-color: #83A603 !important;
+}
+.modifSup {
+    margin-top: 13px;
+}
+span.txtBold {
+    font-weight: 700;
+}
+@media screen and (max-width: 599px) {
+    .title-container, .video {
+        margin-bottom: 30px;
+    }
+  }
+
+.tile {
+    text-align: center;    
+}
+.dce-file-viewer-import-btn {
+    display: none;
+}
+.bloc_pdf {
+    margin-top: 5em;
+}
+
+/*----------------SUPPORT------------------*/
+.titreLeçon {
+    margin-bottom: 2em;    
+}
+.listeLeçon .titreCour {
+    height: 60px;
+}
+div#supports {
+    margin-top: 4em;    
+}
+#supports .titre, .titreform, .titreLeçon {
+    position: relative;
+}
+.titre h2, .titreform h2, .titreLeçon h2 {
+    text-align: center;
+    background: #6295D9;
+    padding: 20px;
+    color: white;
+}
+.title-detail-container a {
+    display: block;
+    color: #333;
+}
+.modifSup a {
+    color: white;
+}
+#supports .titre::after, .titreform::after, .titreLeçon::after {
+    border-top: 21px solid #6295D9;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -21px;
+    left: 50%;
+    margin-left: -21px;
+}
+.bloc_txt, .bloc_img {
+    padding-top: 32px;
+}
+.bloc_txt, .bloc_img {
+    padding-top: 32px;
+}
+.bloc_txt h3 {
+    color: #83A603;
+    background: #F2F2F2;
+    padding: 10px;
+    font-size: 1.4em;
+}
+.bloc_txt p {
+    text-align: justify;
+}
+.bloc_img img {
+    border: 2px solid #83A603;
+    padding: 2px;
+}
+.sousTitre2 {
+    margin-top: 47px;
+}
+/*----------------Formulaire------------------*/
+
+@media screen and (max-width: 599px) {
+    .formSupport input#sousTitre, .formSupport input#titre-txt, .formSupport input#sousTitre1, .formSupport input#contenu, .formSupport input#sousTitre2, .formSupport input#sousTitre3 {
+        height: 45px;
+        width: 100% !important;
+      } 
+  }
+.titreform {
+    text-align: center;
+    margin-bottom:4em;
+    /*margin-top:3em;*/
+}
+
+.formSupport{
+    width: 50% !important;
+    margin: 0 auto;
+    background-color: #F2F2F2;    
+    border-radius: 1px #044BD9; 
+    padding: 19px;
+    border: 1px solid #0460D9;   
+    border-radius: 5px;
+} 
+
+  .formSupport input#sousTitre, .formSupport input#titre-txt, .formSupport input#sousTitre1, .formSupport textarea, .formSupport input#sousTitre2, .formSupport input#sousTitre3 {
+    height: 45px;
+    width: 100%;
+  } 
+  .formSupport label.formContenu {
+    display: block;
+  }
+  .formSupport label.formContenu {    
+    font-size: 14px;
+    padding-top: 12px;
+}
+  .formSupport button {
+    width: 20%;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background: #6295D9;
+    text-transform: uppercase;
+  }
+  .formSupport p {
+    font-family: sans-serif;
+  }
+  .formSupport a {
+    text-decoration: none;
+    color: white;
+  }
+  .formSupport a:hover {
+    color: #673ab7;
+  }
+  
+  .formSupport .sucess {
+    text-align: center;
+    background: #e75e54;
+    width: 20%;
+    padding: 20px;
+    
+    margin-top: 25px;
+    text-align: center;
+}
+.formSupport #contenu{
+    height:150px;
+}
+.btnListe {
+    margin-bottom: 2em;
+}
+.btnListe button.btn.btn-success.btn-sm.mb-2 {
+    width: 10%;
+    height: 38px;
+    float: right;
+    background:#0460D9;
+    border:none;
+}
+.btnListe {
+    margin-top: 1em !important;
+}
+.btnListe a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+}
+.btnListe a:hover {
+    color: #83A603;
+}
+.listeLeçon .table th, .table td{
+    border-style: none !important;
+}
+.listeLeçon table.table {
+    margin-top: 1em;
+}
+.modif {
+    background-image: url(assets/img/modif.png);
+}
+.listeLeçon table.table thead {
+    background: #F2F2F2;
+}
+
+table.table a{
+    text-decoration: none;
+} 
+.formSupport .boutton {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.scrol {
+    height: 700px;
+    overflow-y: scroll;
+}

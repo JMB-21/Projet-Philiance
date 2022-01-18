@@ -4,7 +4,8 @@
    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
         url('Roboto-ThinItalic-webfont.woff') format('woff'),
         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
-        url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); (under the Apache Software License). 
+        url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg');
+         /* (under the Apache Software License).  */
    font-weight: 200;
    font-style: italic;
 }
@@ -134,12 +135,14 @@ footer {
 .footer-top {
    padding-top: 80px;
    padding-bottom: 30px;
+   height: 300px;
 }
 
 .footer-bottom {
    padding-top: 30px;
    padding-bottom: 30px;
    border-top: 1px solid rgba(0, 0, 0, 0.1);
+   height: 100px;
 }
 
 footer .footer-links a,

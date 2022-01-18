@@ -64,7 +64,7 @@ function closeForm() {
 
 
 
-      <a href="#"><img src="./assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
+      <a href="#"><img src="http://localhost/projet-philiance/assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
     
       <nav class="navbar">
         <ul>
