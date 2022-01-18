@@ -69,7 +69,7 @@ class HomeController extends Controller {
         }
             // Si on est passé par la fonction index    
         if (isset($biblio)){              
-           $this->render('home/homepage'.$role);
+        //    $this->render('home/homepage'.$role);
            // sinon on crée les données
         }else{
             $model      =   new BiblioModel();
