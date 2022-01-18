@@ -6,7 +6,7 @@ use App\Models\ThemModel;
 use PDO;
 ?>
 
-<div class="scrol">
+
 <div class="listeLeçon">
     <div class="container">
         <div class="titreLeçon">
@@ -25,12 +25,14 @@ use PDO;
                             die('Erreur : '.$e->getMessage());
                     }
                 ?>
-
+        <div class="scrol">
         <div class="row">
-            <div class="btnListe">
-                <button type="button" class="btn btn-success btn-sm mb-2"><a href="formulaire.html">Inserer</a></button>
-            </div>
-            
+                          
+                <div class="btnListe">                    
+                    <button type="button" class="btn btn-success btn-sm mb-2"><a href="formulaire.html">Inserer</a></button>
+                    <button type="button" class="btn btn-success btn-sm mb-2"><a href="">Tableau de bord</a></button>
+                </div>
+
             <?php
                 $sqlQuery = 'SELECT * FROM biblio';
                 $listes = $mysqltrainingcourses->prepare($sqlQuery);
@@ -68,6 +70,6 @@ use PDO;
                 }
             ?>  
         </div>
+        </div>
     </div>
-</div>
 </div>

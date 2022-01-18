@@ -12,7 +12,7 @@ use App\Models\ThemModel;
 
 
 
-<h2>Page d'accueil Tableau de Bord Auditeur</h2>
+
    
 <!--
 
@@ -24,7 +24,9 @@ use App\Models\ThemModel;
 <?php
 
 ?>
-
+  <div class="titreLeçon">
+            <h2>Tableau de Bord Auditeur</h2>
+  </div>
     <div class="grid-docu">liste des Documents</div>
         <div class="grid-biblio">
             <div class="grid-item">        

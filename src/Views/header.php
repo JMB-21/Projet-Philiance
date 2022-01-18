@@ -38,7 +38,7 @@
                 <button type="submit" class="btn">Profil</button>      
               </form>
 
-              <form class="form-container" action="deconnexion" method="POST">      
+              <form class="form-container" action="home/deconnexion" method="POST">      
                 <h1 class="btn-txt">Deconnexion</h1>        
                 <button type="submit" class="btn">Deconnexion</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>

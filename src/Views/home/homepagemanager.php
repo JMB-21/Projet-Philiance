@@ -32,8 +32,13 @@ Managers :
 - CRUD des  sections/ thèmes/ rubriques/ documents
 - CRUD formateurs/auditeurs 
 - CRUD des documents
-
  -->
+
+
+<div class="titreLeçon">
+    <h2>Tableau de Bord Manager</h2>
+</div>
+
 <div class="grid-admin">
 
 <div class="grid-item">

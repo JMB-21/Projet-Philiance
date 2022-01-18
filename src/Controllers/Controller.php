@@ -23,14 +23,12 @@ abstract class Controller {
         
         extract($data);
 
-        // echo $template;
+         echo "Controller -> Template : ".$template;
         // var_dump($_SESSION);
-        
+
         /** Début de bufferisation de la sortie */
         ob_start();       
        
-// echo "Template : ".$template;
-
         require ROOT . '/src/Views/' . $template . '.php';
         
         /** Fin de bufferisation de la sortie et stckage du contenu du buffer dans $content */
@@ -43,7 +41,8 @@ abstract class Controller {
     /** A détailler */
 
     public function redirect($destination) {
-        header('Location: ' . $destination );       
+
+       // header('Location: ' . $destination );       
     }
     
 }

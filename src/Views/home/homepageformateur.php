@@ -28,7 +28,7 @@
     }
     </style>
 
-<h2>Page d'accueil Tableau de Bord Formateur</h2>
+
    
 <!-- 
 
@@ -38,7 +38,9 @@ Formateurs :
 
  -->
 
-
+ <div class="titreLeçon">
+            <h2>Tableau de Bord Formateur</h2>
+  </div>
 <div class="grid-admin">
 
 <div class="grid-item">

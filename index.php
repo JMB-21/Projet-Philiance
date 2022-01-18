@@ -45,9 +45,7 @@ $request = trim($_GET['p'], '/');
  */
 $params = explode( '/', $request );
 
-// echo "<br>params : ";
-// var_dump ($params);
-// echo "<dr>";
+
 
 /** 
  * Si le premier paramètre est vide 
@@ -71,14 +69,24 @@ if(empty($params[1])) {
     $action = $params[1]; 
 }
 
-// echo "<dr>controller : ";
+// echo "<br><br><br><br><br><br>";
+// echo "<br>params : ";
+// var_dump ($params);
+// echo "<br>";
+
+// echo "<br>controller : ";
 // var_dump ($controller);
-// echo "<dr>";
+// echo "<br>";
 
 //  echo "<br>action : ";
 //  var_dump ($action);
 //  echo "<br>";
 
+ 
+
+//  echo '<script>';
+//   echo 'console.log(''. $controller .'')';
+//   echo '</script>';
 
 /**
  * On vérifie que la méthode (action) existe pour le controller
@@ -104,15 +112,19 @@ session_start();
         $call = new $controller();        
         $call->$action(); 
     } else {   
-              
-        require ROOT . '/src/Views/404.php';
+        header('Location: /Projet-Philiance' );      
+        // require ROOT . '/src/Views/404.php';
     }    
  }else{
-    // echo "-- Pas de Session";
+
+    // echo "<br><br><br><br><br><br>";
+    //  echo "-- Pas de Session";    
+    //   var_dump($controller);
+    //   var_dump($action);
+    //   var_dump($_SERVER);
+
     $controller='App\\Controllers\\homeController';
     $action = 'connexion';
-    //  var_dump($controller);
-    //  var_dump($action);
     $call = new $controller();
     $call->$action();   
     

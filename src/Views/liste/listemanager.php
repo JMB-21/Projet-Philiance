@@ -7,7 +7,8 @@
     <title>Liste Manager</title>
 </head>
 <body>
-    <h2>Vous etes sur la page liste des managers</h2>
-      
+    <div class="titreLeçon">
+            <h2>Liste des managers</h2>
+    </div> 
 </body>
 </html>

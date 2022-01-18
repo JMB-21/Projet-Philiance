@@ -22,10 +22,8 @@
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
    
   
-
-
-   
    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
    <link rel="stylesheet" href="http://localhost/projet-philiance/assets/css/boxicons.min.css">
    <link rel="stylesheet" href="http://localhost/projet-philiance/assets/css/style.css">
 
@@ -53,7 +51,7 @@
     <!-- <header>-->
 
      <?php
-      require ROOT . '/src/Views/header.php';   
+       require ROOT . '/src/Views/header.php';   
      ?>
 
     <hr>

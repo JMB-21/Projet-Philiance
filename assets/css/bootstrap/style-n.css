@@ -77,7 +77,8 @@ span.txtBold {
 
 /*----------------SUPPORT------------------*/
 .titreLeçon {
-    margin-bottom: 2em;    
+    margin-bottom: 2em;
+       
 }
 .listeLeçon .titreCour {
     height: 60px;
@@ -89,6 +90,7 @@ div#supports {
     position: relative;
 }
 .titre h2, .titreform h2, .titreLeçon h2 {
+    margin-top: 100px; 
     text-align: center;
     background: #6295D9;
     padding: 20px;

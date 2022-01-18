@@ -28,7 +28,8 @@ class HomeController extends Controller {
              
         if (isset($_SESSION["newsession"])){                  
             $template="home/homepage".$_SESSION["user"];
-        }else{            
+        }else{  
+                      
             $template="home/homepage";
         }
        

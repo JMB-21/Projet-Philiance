@@ -22,7 +22,7 @@
     }
 </style>
 
-  <h2>Page d'accueil Tableau de Bord Admin</h2>
+  
     
   <!--
       - CRUD comptes utilisateurs 
@@ -31,8 +31,10 @@
       - CRUD des documents 
   -->
 
-  <div class="grid-admin">
-
+  <div class="titreLeçon">
+            <h2>Tableau de Bord Admininistrateur</h2>
+  </div>
+  <div class="grid-admin">  
     <div class="grid-item">
       <div class="grid-docu">
         <div><a href="auditeur/liste">liste des Auditeurs</a></div>

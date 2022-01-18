@@ -7,13 +7,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./assets/img/medecins.jpeg" class="d-block w-100" alt="dernier cours 1" title="dernier cours 1" height="700px">
+                <img src="http://localhost/projet-philiance/assets/img/medecins.jpeg" class="d-block w-100" alt="dernier cours 1" title="dernier cours 1" height="700px">
               </div>
               <div class="carousel-item">
-                <img src="./assets/img/cours-2.jpg" class="d-block w-100" alt="dernier cours 2" title="dernier cours 2" height="700px">
+                <img src="http://localhost/projet-philiance/assets/img/cours-2.jpg" class="d-block w-100" alt="dernier cours 2" title="dernier cours 2" height="700px">
               </div>
               <div class="carousel-item">
-                <img src="./assets/img/cours-3.jpg" class="d-block w-100" alt="dernier cours 3" title="dernier cours 3" height="700px">
+                <img src="http://localhost/projet-philiance/assets/img/cours-3.jpg" class="d-block w-100" alt="dernier cours 3" title="dernier cours 3" height="700px">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
