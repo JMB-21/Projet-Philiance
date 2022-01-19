@@ -7,8 +7,12 @@ use App\Models\NamesModel;
 class AdminController extends Controller {
 
     public function liste() {       
-                      
-        $template="liste/listeadministrateur";               
-        $this->render($template); 
+      
+        $model      =   new NamesModel();
+        $result     =   $model->findAdmin();
+        $names    =   $result->fetchall();
+        
+        $template="liste/listeadministrateur";      
+        $this->render($template, array('names' => $names)); 
     }
 }

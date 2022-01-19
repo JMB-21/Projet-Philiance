@@ -31,8 +31,31 @@ class NamesModel extends Model  {
         //$sql = "SELECT pseudo, mdp FROM {$this->table} WHERE pseudo = $pseudo and mdp= $mdp";        
         $sql = "SELECT * FROM names WHERE pseudo = :pseudo and mdp= :mdp";         
         return $this->getInstance()->query($sql);
-
-       
      }
 
+    public function findAdmin() {      
+        
+        $sql = "SELECT * FROM {$this->table} WHERE idrule = '1'"; 
+        return $this->getInstance()->query($sql);
+    }  
+    
+    public function findManag() {      
+        
+        $sql = "SELECT * FROM {$this->table} WHERE idrule = '2'"; 
+        return $this->getInstance()->query($sql);
+    }
+
+    public function findForm() {      
+        
+        $sql = "SELECT * FROM {$this->table} WHERE idrule = '3'"; 
+        return $this->getInstance()->query($sql);
+    }
+
+    public function findAuditeur() {      
+        
+        $sql = "SELECT * FROM {$this->table} WHERE idrule = '4'"; 
+        return $this->getInstance()->query($sql);
+    }
+
+    
 }

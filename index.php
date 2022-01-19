@@ -33,6 +33,10 @@ define('ROOT', __DIR__);
 /** trim() : supprimme les caractères `/` au début et à la fin du paramètre passé dans l'url */
 $request = trim($_GET['p'], '/');
 
+// echo "<br><br><br><br><br><br>";
+// echo "<br>request : ";
+// var_dump ($request);
+// echo "<br>";
 
 
 /** 
@@ -52,7 +56,7 @@ $params = explode( '/', $request );
  * => url = http://localhost/
  * => c'est la page d'accueil 
  */
-if(empty($params[0])) {
+if(empty($params[0])) {    
     $controller = "App\\Controllers\\HomeController";   
 } else {   
     $controller = "App\\Controllers\\" . ucfirst($params[0]) . 'Controller';  
@@ -63,11 +67,21 @@ if(empty($params[0])) {
  * => url = http://localhost/controller
  * => on attribue une action "par défaut" (par exemple la liste des entités) 
  */
+
+$id=""; 
+
 if(empty($params[1])) {
     $action = 'index';  
-} else {
-    $action = $params[1]; 
+} else { 
+    if(empty($params[2])) {
+        $action = $params[1]; 
+        
+    } else {
+        $action = $params[1]; 
+        $id=$params[2];
+    }
 }
+
 
 // echo "<br><br><br><br><br><br>";
 // echo "<br>params : ";
@@ -109,10 +123,11 @@ session_start();
 
     if(method_exists($controller, $action)) {   
         // echo "method_exists";
-        $call = new $controller();        
-        $call->$action(); 
-    } else {   
-        header('Location: /Projet-Philiance' );      
+        $call = new $controller(); 
+
+        $call->$action($id); 
+    } else {       
+         header('Location: /Projet-Philiance' );      
         // require ROOT . '/src/Views/404.php';
     }    
  }else{

@@ -30,7 +30,7 @@ use PDO;
                           
                 <div class="btnListe">                    
                     <button type="button" class="btn btn-success btn-sm mb-2"><a href="formulaire.html">Inserer</a></button>
-                    <button type="button" class="btn btn-success btn-sm mb-2"><a href="">Tableau de bord</a></button>
+                    <button type="button" class="btn btn-success btn-sm mb-2"><a href="home">Tableau de bord</a></button>
                 </div>
 
             <?php
@@ -59,9 +59,11 @@ use PDO;
                                 </div>
                                 <div class="modifSup">
                                     <button type="button" class="btn btn-success btn-sm mb-2"><a
-                                            href="edit.php?idtrainingcourses=<?= $trainingcourses['idb'] ?>">Modifier</a></button>
+                                            
+                                            href="edit/<?= $trainingcourses['idb'] ?>">Modifier</a></button>
+
                                     <button type="button" class="btn btn-success btn-sm mb-2"><a
-                                            href="delete.php?idtrainingcourses=<?= $trainingcourses['idb'] ?>">Supprimer</a></button>
+                                            href="supprime/<?= $trainingcourses['idb'] ?>">Supprimer</a></button>
                                 </div>
                             </div>
                         </div>

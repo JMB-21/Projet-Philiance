@@ -7,8 +7,12 @@ use App\Models\NamesModel;
 class ManagerController extends Controller {
 
     public function liste() {       
-                      
-        $template="liste/listemanager";               
-        $this->render($template); 
+      
+        $model      =   new NamesModel();
+        $result     =   $model->findManag();
+        $names    =   $result->fetchall();
+        
+        $template="liste/listemanager";         
+        $this->render($template, array('names' => $names)); 
     }
 }

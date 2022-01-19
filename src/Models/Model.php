@@ -38,7 +38,7 @@ abstract class Model {
            
         return $this->getInstance()->query($sql);
         
-    }
+    }    
 
     /** Une ligne particulière d'une table */
     public function find($idnam,$id) {

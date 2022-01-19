@@ -23,8 +23,8 @@ abstract class Controller {
         
         extract($data);
 
-         echo "Controller -> Template : ".$template;
-        // var_dump($_SESSION);
+          echo "Controller -> Template : ".$template;
+        //  var_dump($data);
 
         /** Début de bufferisation de la sortie */
         ob_start();       

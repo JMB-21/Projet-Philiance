@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\Controller;
 use App\Models\NamesModel;
+use App\Models\SectionModel;
 use App\Models\Model;
 use App\Models\RulesModel;
 use App\Models\BiblioModel;

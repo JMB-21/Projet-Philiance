@@ -8,7 +8,11 @@ class FormateurController extends Controller {
 
     public function liste() {       
                       
-        $template="liste/listeformateur";               
-        $this->render($template); 
+        $model      =   new NamesModel();
+        $result     =   $model->findForm();
+        $names    =   $result->fetchall();
+        
+        $template="liste/listeformateur";        
+        $this->render($template, array('names' => $names));         
     }
 }
