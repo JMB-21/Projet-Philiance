@@ -27,8 +27,8 @@ abstract class Controller {
         //  var_dump($data);
 
         /** Début de bufferisation de la sortie */
-        ob_start();       
-       
+        ob_start();   
+                      
         require ROOT . '/src/Views/' . $template . '.php';
         
         /** Fin de bufferisation de la sortie et stckage du contenu du buffer dans $content */

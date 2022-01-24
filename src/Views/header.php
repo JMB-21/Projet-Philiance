@@ -19,7 +19,9 @@
             
                 <label for="mdp"><b>Mot de passe</b></label>
                 <input type="text" placeholder="mdp" name="mdp" required>
-            
+               
+	            <input type="checkbox" name="rememberme" id="remembercheckbox" /><label for="remembercheckbox"> Se souvenir de moi</label>
+	            
                 <button type="submit" class="btn">Connexion</button>
           
                 <!-- <p class="paragraphe">Ou </p>
@@ -89,4 +91,15 @@ function closeForm() {
             </div>
         </nav>        
     </header>
+
+    <?php if(isset($searchResult)) : ?>
+        <section class="">
+          <?php if(empty($searchResult)) : ?>
+            <h4>Aucun résultat pour votre recherche</h4>
+          <?php else : ?>  
+            <?php foreach($searchResult as $result) : ?>
+              <p>Contenu de $result</p>
+            <?php endforeach; ?>  
+        </section>
+    <?php endif; ?>
     

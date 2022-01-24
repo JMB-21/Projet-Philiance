@@ -129,6 +129,9 @@ h1 {
   
       <label for="mdp"><b>Mot de passe</b></label>
       <input type="text" placeholder="mdp" name="mdp" required>
+      <br /><br />
+	            <input type="checkbox" name="rememberme" id="remembercheckbox" /><label for="remembercheckbox">Se souvenir de moi</label>
+	            <br /><br />
   
       <button type="submit" class="btn">Connexion</button>
   <!-- <p class="paragraphe">Ou </p>

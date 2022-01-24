@@ -59,6 +59,13 @@ abstract class Model {
 
         $sql = "SELECT * FROM {$this->table} WHERE pseudo = '$pseudo' and mdp= '$mdp'";
         return $this->getInstance()->query($sql);      
- }
+    }
+    
+    // ** la ligne email/mdp d'une table */
+    public function findmail($mail,$mdp) {
+
+        $sql = "SELECT * FROM {$this->table} WHERE email = '$mail' and mdp= '$mdp'";
+        return $this->getInstance()->query($sql);      
+    }
 
 }

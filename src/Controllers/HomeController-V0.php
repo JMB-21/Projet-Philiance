@@ -30,7 +30,7 @@ class HomeController extends Controller {
         if (isset($_SESSION["newsession"])){                  
             $template="home/homepage".$_SESSION["user"];
         }else{  
-              echo "gloup";        
+                      
             $template="home/homepage";
         }
        
@@ -41,13 +41,6 @@ class HomeController extends Controller {
     public function connexion() {
 
         $role ="";       
-
-     echo "connexion";
-     var_dump($_POST);
-
-    // $mail = htmlspecialchars($_POST['email']);
-    //    $mdpconnect = sha1($_POST['mdpconnect']);
-    // $mdp = $_POST['mdp'];
 
         // si le formulaire de connexion a été rempli
         if (isset($_POST["email"])){ 
@@ -72,17 +65,11 @@ class HomeController extends Controller {
 
                 // si le user/mdp est le bon
                 if (isset($user)){      
-                    // on crée variable de session 
+                    // on crée variable de session          
                     $_SESSION["newsession"]=1;
                     $_SESSION["user"]=$role;
                     $_SESSION["name"] = $user[0][2]." ".$user[0][1];
                     echo "<br>user ok <br>";
-
-                    if(isset($_POST['rememberme'])) {
-						setcookie('email',$mail,time()+3600,null,null,false,true);
-						setcookie('mdp',$mdp,time()+3600,null,null,false,true);	
-                        var_dump($_COOKIE);					
-					}
                 }
             }
         }
@@ -188,18 +175,6 @@ class HomeController extends Controller {
             session_destroy();                           
         }           
         $this->render('home/homepage');
-    }
-
-    public function newsletter() {  
-        echo "news...";     
-
-        $this->render('home/newsletter');
-    }
-
-    public function mdpoublie() {  
-        echo "Oubli ?..";     
-
-        $this->render('mdpoublie');
     }
 
 }

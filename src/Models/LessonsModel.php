@@ -24,5 +24,10 @@ class LessonsModel extends Model  {
         $requete->execute($data);
     }
 
+    public function searchByTitre(string $terme) {
+        $sql = "SELECT * FROM  {$this->Table} WHERE titre LIKE '%" . $terme ."%'";
+        return $this->getInstance()->query($sql);
+    }
+
 }
 

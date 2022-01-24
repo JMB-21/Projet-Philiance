@@ -127,8 +127,8 @@ session_start();
 
         $call->$action($id); 
     } else {       
-         header('Location: /Projet-Philiance' );      
-        // require ROOT . '/src/Views/404.php';
+        //  header('Location: /Projet-Philiance' );      
+        require ROOT . '/src/Views/page404.html';
     }    
  }else{
 
@@ -139,8 +139,12 @@ session_start();
     //   var_dump($_SERVER);
 
     $controller='App\\Controllers\\homeController';
-    $action = 'connexion';
-    $call = new $controller();
-    $call->$action();   
-    
+    // $action = 'connexion';
+
+    if( method_exists( $controller, $action )) {
+        $call = new $controller();
+        $call->$action();
+    } else {
+        require ROOT . '/src/Views/404.php';
+    }   
 }

@@ -11,5 +11,6 @@
                 <td><?= $categorie['libelle']; ?></td>
             </tr>
         <?php endforeach; ?>
+
     </tbody>
 </table>
