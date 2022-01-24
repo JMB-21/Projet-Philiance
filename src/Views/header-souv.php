@@ -9,7 +9,7 @@
     if (!isset($_SESSION["newsession"])){ 
 ?>
       <div class="form-popup" id="myForm" >
-        <form class="form-container" action="connexion" method="POST">
+        <form class="form-container" action="http://localhost/Projet-Philiance/home/connexion" method="POST">
           <h1 class="btn-txt">Connexion</h1>
       
           <label for="email"><b>E-mail</b></label>
@@ -35,7 +35,7 @@
           <button type="submit" class="btn">Profil</button>      
         </form>
 
-        <form class="form-container" action="home/deconnexion" method="POST">      
+        <form class="form-container" action="http://localhost/Projet-Philiance/home/deconnexion" method="POST">      
           <h1 class="btn-txt">Deconnexion</h1>        
           <button type="submit" class="btn" name="formdeconnex">Deconnexion</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
@@ -61,11 +61,11 @@ document.getElementById("myForm").style.display = "none";
 
 
 
-<a href="#"><img src="http://localhost/projet-philiance/assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
+<a href="http://localhost/projet-philiance/home"><img src="http://localhost/projet-philiance/assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
 
 <nav class="navbar">
   <ul>
-    <li><a href="home">Accueil</a></li>
+    <li><a href="http://localhost/projet-philiance/home">Accueil</a></li>
       <li><a href="#">Notre catalogue</a>
       <ul>
         <li><a href="#">Informatique</a></li>
@@ -76,7 +76,7 @@ document.getElementById("myForm").style.display = "none";
 
     <li><a href="#">Mode de formation</a></li>
       <li><a href= "http://localhost/Projet-Philiance/home/newsletter">Newsletter</a></li>
-      <li><a href="#">contact</a></li>
+      <li><a href="http://localhost/Projet-Philiance/home/contact">contact</a></li>
   </ul>
 
   

@@ -10,31 +10,33 @@ use App\Models\RulesModel;
 use App\Models\BiblioModel;
 use App\Models\RubrikModel;
 use App\Models\ThemModel;
+use App\Models\SupportModel;
 
 class HomeController extends Controller {
 
     public function index() {
-       
-        $model      =   new BiblioModel();
-        $result     =   $model->findAll();
-        $biblio    =   $result->fetchAll();
-   
-        $model     =   new RubrikModel();
-        $result     =   $model->findAll();
-        $rubrik    =   $result->fetchAll();
-        
-        $model     =   new ThemModel();
-        $result     =   $model->findAll();
-        $theme    =   $result->fetchAll();
-             
-        if (isset($_SESSION["newsession"])){                  
+
+        if (isset($_SESSION["newsession"])){   
+            $model =new BiblioModel();
+            $result = $model->findAll();
+            $biblio = $result->fetchAll();
+    
+            $model = new RubrikModel();
+            $result = $model->findAll();
+            $rubrik = $result->fetchAll();
+            
+            $model = new ThemModel();
+            $result = $model->findAll();
+            $theme = $result->fetchAll();             
+                         
             $template="home/homepage".$_SESSION["user"];
-        }else{  
-              echo "gloup";        
+            $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme));  
+
+        }else{    
+
             $template="home/homepage";
-        }
-       
-        $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme));        
+            $this->render($template);  
+        }       
     }
 
 
@@ -191,15 +193,37 @@ class HomeController extends Controller {
     }
 
     public function newsletter() {  
-        echo "news...";     
 
         $this->render('home/newsletter');
     }
 
     public function mdpoublie() {  
-        echo "Oubli ?..";     
 
         $this->render('mdpoublie');
     }
 
+    public function contact() {         
+
+        $this->render('home/contact');
+    }
+
+    public function mentions() {         
+
+        $this->render('home/mentions');
+    }
+
+    public function faq() {         
+
+        $this->render('home/faq');
+    }
+
+    public function cookie() {         
+
+        $this->render('home/info-cookie');
+    }
+
+    public function support() {         
+
+        $this->render('home/support');
+    }
 }

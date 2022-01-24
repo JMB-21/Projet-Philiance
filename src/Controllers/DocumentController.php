@@ -11,14 +11,14 @@ class DocumentController extends Controller {
 
     public function liste() {       
                       
-        $template="liste/listedocument"; 
+        $template= "liste/listedocument"; 
         echo "gloup2";              
         $this->render($template); 
     }
 
     public function edit($id) {       
                       
-        $template="edit/editdocument";  
+        $template= "edit/editdocument";  
         
         $model      =   new BiblioModel();
         $result     =   $model->find('idb',$id);
@@ -26,6 +26,20 @@ class DocumentController extends Controller {
         
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
         $this->render($template, array('biblio' => $biblio)); 
+        
+    }
+
+    public function editpdf() {       
+                      
+        $template="edit/editpdf"; 
+        $this->render($template);
+        
+        
+        // $model      =   new BiblioModel();
+        // $result     =   $model->find('idb',$id);
+        // $biblio    =   $result->fetch();  
+        // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
+        
         
     }
 

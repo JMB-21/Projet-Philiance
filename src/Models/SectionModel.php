@@ -6,7 +6,7 @@ use App\Models\Model;
 
 
  
-//  * Modèle spécialisé chargé de réaliser les requêtes SQL relatives de la table rules
+//  * Modèle spécialisé chargé de réaliser les requêtes SQL relatives de la table section
 //  * Hérite du model principal
  
 echo "gloup";

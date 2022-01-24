@@ -14,9 +14,6 @@ class BiblioModel extends Model  {
 
     protected $table = 'biblio';
 
-
-   
-
     /** 
      * Les modèles spécialisés traitent les requêtes fortement couplées
      * au schéma des tables (insert, update)

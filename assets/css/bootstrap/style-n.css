@@ -27,8 +27,9 @@ p.text-center {
 .title-detail-container {
     padding: 24px;
     text-align: center;    
-    height: 195px;
+    height: 195px; 
 }
+
 .title-detail-container h3{
     text-transform:capitalize;
 
@@ -81,7 +82,7 @@ span.txtBold {
        
 }
 .listeLeçon .titreCour {
-    height: 60px;
+    /* height: 60px; */
 }
 div#supports {
     margin-top: 4em;    

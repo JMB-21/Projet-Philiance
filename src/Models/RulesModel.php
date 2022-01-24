@@ -12,26 +12,21 @@ use App\Models\Model;
 
 class RulesModel extends Model  {
 
-    protected $table = 'names';
-
-     
+    protected $table = 'rules';
+    
     //   * Les modèles spécialisés traitent les requêtes fortement couplées
-    //  * au schéma des tables (insert, update)
-   
+    //  * au schéma des tables (insert, update)   
 
     public function add(array $data) {
-        $sql = "INSERT INTO {$this->table} (pseudo,mdp) VALUES (:pseudo,:mdp)";
+        $sql = "INSERT INTO {$this->table} (typ) VALUES (:typ)";
         $requete = $this->getInstance()->prepare($sql);
         $requete->execute($data);
     }
 
-     // ** la ligne pseudo/mdp d'une table */
-     public function findrule($id) {
-      
-        //$sql = "SELECT pseudo, mdp FROM {$this->table} WHERE pseudo = $pseudo and mdp= $mdp";        
-        $sql = "SELECT * FROM rules WHERE idr = $id";
-
-         // echo "<br>".$sql."<br>";
+     // ** la ligne d'une table */
+     public function findrule($id) {      
+             
+        $sql = "SELECT * FROM rules WHERE idr = $id";       
         return $this->getInstance()->query($sql);
 
        

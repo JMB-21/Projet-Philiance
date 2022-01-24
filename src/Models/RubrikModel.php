@@ -6,14 +6,12 @@ use App\Models\Model;
 
 
  
-//  * Modèle spécialisé chargé de réaliser les requêtes SQL relatives de la table rules
+//  * Modèle spécialisé chargé de réaliser les requêtes SQL relatives de la table rubrik
 //  * Hérite du model principal
  
-echo "gloup";
-
 class RubrikModel extends Model  {
 
-    protected $table = 'section';
+    protected $table = 'rubrik';
 
      
     //   * Les modèles spécialisés traitent les requêtes fortement couplées
@@ -21,12 +19,12 @@ class RubrikModel extends Model  {
    
 
     public function add(array $data) {
-        $sql = "INSERT INTO {$this->table} (group,sector,cours) VALUES (:group,:sector,:cours)";
+        $sql = "INSERT INTO {$this->table} (idthem,nom) VALUES (:idthem,:nom)";
         $requete = $this->getInstance()->prepare($sql);
         $requete->execute($data);
     }
 
-     // ** ligne de la table section */
+     // ** ligne de la table */
      public function findrubrik($id) {
              
         $sql = "SELECT * FROM rubrik WHERE idrubrik = $id";       

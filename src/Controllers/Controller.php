@@ -23,7 +23,7 @@ abstract class Controller {
         
         extract($data);
 
-          echo "Controller -> Template : ".$template;
+          // echo "Controller -> Template : ".$template;
         //  var_dump($data);
 
         /** Début de bufferisation de la sortie */
