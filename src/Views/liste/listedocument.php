@@ -11,7 +11,7 @@ use PDO;
 <div class="listeLeçon">
     <div class="container">
         <div class="titreLeçon">
-            <h2>Liste des Leçons</h2>
+            <h2>Liste des documents</h2>
         </div>
 
         <?php
@@ -26,13 +26,32 @@ use PDO;
                     die('Erreur : '.$e->getMessage());
             }
         ?>
-        <div class="scrol">
-        <div class="row">
-                          
-            <div class="btnListe">                    
+        
+        <div class="row"> 
+            <div class="col-md-6">
+                <form class="input-group" action="rechdocument" method="post">
+                    <div class="form-outline">
+                        <input type="rechercher" id="form1" class="form-control" name="criteria" placeholder="Rechercher" />                                
+                        <!-- <label class="form-label" for="form1" >Search</label> -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i>                                   
+                    </button>
+                </form>                             
+            </div>  
+
+            <div class="col-md-6 btnListe">
+                <button type="button" class="btn btn-success btn-sm mb-2"><a href="adddocument">Inserer</a></button>
+            </div>
+        </div> 
+    
+
+    <div class="row listeLeçon"> 
+                  
+            <!-- <div class="btnListe">                    
                 <button type="button" class="btn btn-success btn-sm mb-2"><a href="formulaire.html">Inserer</a></button>
                 <button type="button" class="btn btn-success btn-sm mb-2"><a href="home">Tableau de bord</a></button>
-            </div>
+            </div> -->
 
             <?php
                 $sqlQuery = 'SELECT * FROM biblio';
@@ -58,10 +77,8 @@ use PDO;
                                         <a href="editpdf/1"><img src="http://localhost/projet-philiance/assets/img/pdf.svg" alt=""></a>
     <?php                                    
                                         break;
-                                    case 'mp4':
-    ?>                                    
-                                        <a href="editpdf/1"><img src="http://localhost/projet-philiance/assets/img/video.jpg" alt=""></a>
-    <?php                                    
+                                    case 'mp4':?>                                     
+                                        <a href="editvideo/1"><img src="http://localhost/projet-philiance/assets/img/video.jpg" alt=""></a>    <?php                                    
                                         break;
                                     default:
                                         
@@ -94,9 +111,22 @@ use PDO;
                                 </div>
 
                                 <div class="duree">
-                                    <span class="txtBold">Durée: 
-                                    <?php echo $trainingcourses ['duree']; ?> min
-                                    </span>
+                                    <span class="txtBold">
+                                    <?php
+                                        switch ($supp['typ']) {
+                                        case 'pdf':     
+                                            echo "Durée du cours : ";
+                                            break;
+                                        case 'mp4':                                     
+                                            echo "Durée de la vidéo : ";                                             
+                                            break;
+                                        default:
+                                            echo "Durée : ";
+                                            break;
+                                        }                                    
+                                        echo $trainingcourses ['duree'];
+                                    ?>
+                                    min</span>
                                 </div>   
 
                                 <div class="modifSup">

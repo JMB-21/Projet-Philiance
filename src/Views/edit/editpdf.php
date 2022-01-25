@@ -1,7 +1,7 @@
 
-
+<p>&nbsp;</p>
 <div class="titreLeçon">
-    <h2>viasualisation du document</h2>
+    <h2>visualisation du document</h2>
 </div>
 
 <div class="text-center">

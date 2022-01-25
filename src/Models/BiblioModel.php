@@ -26,10 +26,10 @@ class BiblioModel extends Model  {
     }    
 }
 
-class RubrikModel extends Model  {
+// class RubrikModel extends Model  {
     
-    protected $table = 'rubrik'; 
-}
+//     protected $table = 'rubrik'; 
+// }
 
 class ThemModel extends Model  {
 

@@ -397,3 +397,27 @@ footer .social-icons a:hover,
 footer .footer-links a:hover {
    color: #fff;
 }
+
+/*mentions legales*/
+.ml {
+   padding-top: 150px;
+   padding-bottom: 20px;
+   padding-left: 100px;
+}
+
+
+.ml h1 {
+   text-align: center;   
+}
+
+
+.txt-leg {
+   padding-top: 40px;
+}
+
+.txt-jur {
+   padding-top: 40px;
+   padding-right: 100px;
+   text-align: justify;
+   line-height: 150%;
+}

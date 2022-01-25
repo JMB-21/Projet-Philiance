@@ -9,8 +9,6 @@ use App\Models\Model;
 //  * Modèle spécialisé chargé de réaliser les requêtes SQL relatives de la table section
 //  * Hérite du model principal
  
-echo "gloup";
-
 class SectionModel extends Model  {
 
     protected $table = 'section';
@@ -27,7 +25,7 @@ class SectionModel extends Model  {
     }
 
      // ** ligne de la table section */
-     public function findsection($id) {
+    public function findsection($id) {
              
         $sql = "SELECT * FROM section WHERE idsec = $id";       
         return $this->getInstance()->query($sql);

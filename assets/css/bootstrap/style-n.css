@@ -78,8 +78,7 @@ span.txtBold {
 
 /*----------------SUPPORT------------------*/
 .titreLeçon {
-    margin-bottom: 2em;
-       
+    margin-bottom: 2em;  
 }
 .listeLeçon .titreCour {
     /* height: 60px; */
@@ -95,7 +94,7 @@ div#supports {
     text-align: center;
     background: #6295D9;
     padding: 20px;
-    color: white;
+    color: rgb(5, 5, 5);
 }
 .title-detail-container a {
     display: block;

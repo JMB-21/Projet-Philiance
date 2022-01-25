@@ -44,22 +44,25 @@ class HomeController extends Controller {
 
         $role ="";       
 
-     echo "connexion";
-     var_dump($_POST);
+    //  echo "connexion";
+    //  var_dump($_POST);
 
-    // $mail = htmlspecialchars($_POST['email']);
+   
     //    $mdpconnect = sha1($_POST['mdpconnect']);
-    // $mdp = $_POST['mdp'];
+    
 
         // si le formulaire de connexion a été rempli
         if (isset($_POST["email"])){ 
+            
+            $mail = htmlspecialchars($_POST['email']);
+            $mdp = $_POST['mdp'];
 
             // On cherche sur l'utilisateur a bien rentré son mdp 
             $name = new NamesModel();
             $result = $name->findmail($_POST["email"],$_POST["mdp"]);
             $user = $result->fetchall(); 
 
-            var_dump ($user);
+            // var_dump ($user);
 
             // si c'est le bon user/mdp
             if (!empty($user)){
@@ -72,13 +75,19 @@ class HomeController extends Controller {
                 // on assigne à role le role trouvé
                 $role = $rule[0][1];            
 
+                
+
                 // si le user/mdp est le bon
                 if (isset($user)){      
                     // on crée variable de session 
                     $_SESSION["newsession"]=1;
                     $_SESSION["user"]=$role;
+                    $_SESSION["role"]= $rule[0]['idr'];
                     $_SESSION["name"] = $user[0][2]." ".$user[0][1];
-                    echo "<br>user ok <br>";
+
+                    // var_dump($_SESSION);
+
+                    // echo "<br>user ok <br>";
 
                     if(isset($_POST['rememberme'])) {
 						setcookie('email',$mail,time()+3600,null,null,false,true);

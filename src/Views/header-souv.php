@@ -84,6 +84,20 @@ document.getElementById("myForm").style.display = "none";
   <div class="social-icons">
           <a href="#" onclick="openForm()"><i class="far fa-user-circle"></i></a>
       </div>
+      <?php
+         if (isset($_SESSION["newsession"])){ 
+      ?>
+          <div class="navbar">
+            &nbsp; <?=$_SESSION["name"] ?>
+            <br>            
+            &nbsp; <?=$_SESSION["user"] ?>
+          </div>
+          <div class="navbar">
+            
+          </div>
+      <?php
+        }
+      ?>    
   </nav>        
 </header>
 

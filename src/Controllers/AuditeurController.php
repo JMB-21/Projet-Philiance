@@ -15,4 +15,14 @@ class AuditeurController extends Controller {
         $template="liste/listeauditeur";        
         $this->render($template, array('names' => $names)); 
     }
+
+    public function rech() { 
+        
+        // $model      =   new NamesModel();
+        // $result     =   $model->findAuditeur();
+        // $names    =   $result->fetchall();
+        
+        $template="rech/rechnom";        
+        $this->render($template, array('names' => $names)); 
+    }
 }

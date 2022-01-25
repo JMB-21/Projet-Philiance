@@ -31,7 +31,7 @@ class RubrikModel extends Model  {
         return $this->getInstance()->query($sql);
      }
 
-    public function findRubrikAll() {      
+    public function findrubrikall() {      
         
         $sql = "SELECT * FROM {$this->table}"; 
         return $this->getInstance()->query($sql);

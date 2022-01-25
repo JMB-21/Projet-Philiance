@@ -28,7 +28,9 @@
     }
     </style>
 
-
+<?php 
+      $path = "http://localhost/Projet-Philiance";
+?>
    
 <!-- 
 
@@ -37,7 +39,8 @@ Formateurs :
 - Read utilisateurs 
 
  -->
-
+ <p>&nbsp;</p>
+ 
  <div class="titreLeçon">
             <h2>Tableau de Bord Formateur</h2>
   </div>
@@ -45,30 +48,30 @@ Formateurs :
 
 <div class="grid-item">
 <div class="grid-docu">
-<div><a href="../auditeur/liste">liste des Auditeurs</a></div>
-<div><a href="../auditeur/rech">recherche Auditeur</a></div>
+<div><a href="<?=$path?>/auditeur/liste">liste des Auditeurs</a></div>
+<div><a href="<?=$path?>/auditeur/rech">recherche Auditeur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../formateur/liste">liste des formateurs</a></div>
-<div><a href="../formateur/rech">recherche formateur</a></div>
+<div><a href="<?=$path?>/formateur/liste">liste des formateurs</a></div>
+<div><a href="<?=$path?>/formateur/rech">recherche formateur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../manager/liste">liste des Managers</a> </div>
-<div><a href="../manager/rech">recherche manager</a></div>
+<div><a href="<?=$path?>/manager/liste">liste des Managers</a> </div>
+<div><a href="<?=$path?>/manager/rech">recherche manager</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../admin/liste">liste des Administrateurs</a></div>
+<div><a href="<?=$path?>/admin/liste">liste des Administrateurs</a></div>
 </div>
 </div>
 
 <div class="grid-item">
 <div class="grid-docu">
-   <div><a href="../document/liste">liste des Documents</a></div>
-   <div><a href="../document/rech">recherche de documents</a></div>
-   <div><a href="../document/add">ajouter un document</a></div>   
+   <div><a href="<?=$path?>/document/liste">liste des Documents</a></div>
+   <div><a href="<?=$path?>/document/rechdocument">recherche de documents</a></div>
+   <div><a href="<?=$path?>/document/adddocument">ajouter un document</a></div>   
 </div>
 
 </div>

@@ -11,8 +11,7 @@ class DocumentController extends Controller {
 
     public function liste() {       
                       
-        $template= "liste/listedocument"; 
-        echo "gloup2";              
+        $template= "liste/listedocument";                      
         $this->render($template); 
     }
 
@@ -33,15 +32,15 @@ class DocumentController extends Controller {
                       
         $template="edit/editpdf"; 
         $this->render($template);
-        
-        
-        // $model      =   new BiblioModel();
-        // $result     =   $model->find('idb',$id);
-        // $biblio    =   $result->fetch();  
-        // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
-        
-        
     }
+
+    public function editvideo() {       
+                      
+        $template="edit/editvideo"; 
+        $this->render($template);      
+    }
+
+
 
     public function supprime($id) {       
                       
@@ -56,19 +55,28 @@ class DocumentController extends Controller {
         
     }
 
-
-    public function deconnexion() { 
-        
-        if (isset($_SESSION["newsession"])){ 
-
-           
-            session_unset();
-            session_destroy();                                 
-    }    
-
-    // $template="home/deconnexion";
-    // $template="home/homepage";
-    $template="";
+    public function adddocument() {       
+                      
+        $template="add/adddocument";         
         $this->render($template);
+               
+        // $model      =   new BiblioModel();
+        // $result     =   $model->find('idb',$id);
+        // $biblio    =   $result->fetch();  
+        // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme));         
     }
+
+    public function rechdocument() {       
+        
+          // $model      =   new BiblioModel();
+        // $result     =   $model->find('idb',$id);
+        // $biblio    =   $result->fetch();  
+        // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme));  
+        
+        $template="rech/rechdocument";       
+        $this->render($template);
+               
+    }
+
+    
 }

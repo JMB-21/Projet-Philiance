@@ -28,6 +28,14 @@ class NamesModel extends Model  {
         return $this->getInstance()->query($sql);
      }
 
+     // ** la ligne id d'une table */
+     public function findnameid($id) {
+        
+        //$sql = "SELECT pseudo, mdp FROM {$this->table} WHERE pseudo = $pseudo and mdp= $mdp";        
+        $sql = "SELECT * FROM names WHERE idn = $id";         
+        return $this->getInstance()->query($sql);
+     }
+
     public function findAdmin() {      
         
         $sql = "SELECT * FROM {$this->table} WHERE idrule = '1'"; 

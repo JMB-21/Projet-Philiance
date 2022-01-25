@@ -68,25 +68,25 @@ if(empty($params[0])) {
  * => on attribue une action "par défaut" (par exemple la liste des entités) 
  */
 
-$id=""; 
-
-if(empty($params[1])) {
-    $action = 'index';  
-} else { 
-    if(empty($params[2])) {
-        $action = $params[1]; 
-        
-    } else {
-        $action = $params[1]; 
-        $id=$params[2];
+ 
+    $id ="";
+    if(empty($params[1])) {
+        $action = 'index';  
+    } else {  
+        if(empty($params[2])) {
+            $action = $params[1]; 
+        } else {
+            $action = $params[1]; 
+            $id=$params[2];
+        }
     }
-}
 
 
-// echo "<br><br><br><br><br><br>";
-// echo "<br>params : ";
-// var_dump ($params);
-// echo "<br>";
+
+//  echo "<br><br><br><br><br><br>";
+// // echo "<br>params : ";
+// // var_dump ($params);
+// // echo "<br>";
 
 // echo "<br>controller : ";
 // var_dump ($controller);
@@ -124,7 +124,6 @@ session_start();
     if(method_exists($controller, $action)) {   
         // echo "method_exists";
         $call = new $controller(); 
-
         $call->$action($id); 
     } else {       
         //  header('Location: /Projet-Philiance' );      

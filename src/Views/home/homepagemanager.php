@@ -23,9 +23,10 @@
    
     }
     </style>
-
-<h2>Page d'accueil Tableau de Bord Manager</h2>
    
+   <?php 
+      $path = "http://localhost/Projet-Philiance";
+   ?>   
 <!-- 
 
 Managers :
@@ -33,7 +34,7 @@ Managers :
 - CRUD formateurs/auditeurs 
 - CRUD des documents
  -->
-
+ <p>&nbsp;</p>
 
 <div class="titreLeçon">
     <h2>Tableau de Bord Manager</h2>
@@ -43,49 +44,49 @@ Managers :
 
 <div class="grid-item">
 <div class="grid-docu">
-    <div><a href="../auditeur/liste">liste des Auditeurs</a></div>
-    <div><a href="../auditeur/rech">recherche Auditeur</a></div>
-    <div><a href="../auditeur/add">ajouter un Auditeur</a></div>
+    <div><a href="<?=$path?>/auditeur/liste">liste des Auditeurs</a></div>
+    <div><a href="<?=$path?>/auditeur/rech">recherche Auditeur</a></div>
+    <div><a href="<?=$path?>/auditeur/add">ajouter un Auditeur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../formateur/liste">liste des formateurs</a></div>
-<div><a href="../formateur/rech">recherche formateur</a></div>
-<div><a href="../formteur/add">ajouter un formateur</a></div>
+<div><a href="<?=$path?>/formateur/liste">liste des formateurs</a></div>
+<div><a href="<?=$path?>/formateur/rech">recherche formateur</a></div>
+<div><a href="<?=$path?>/formteur/add">ajouter un formateur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../manager/liste">liste des Managers</a></div>
-<div><a href="../manager/rech">recherche manager</a></div>
+<div><a href="<?=$path?>/manager/liste">liste des Managers</a></div>
+<div><a href="<?=$path?>/manager/rech">recherche manager</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="../admin/liste">liste des Administrateurs</a></div>
+<div><a href="<?=$path?>/admin/liste">liste des Administrateurs</a></div>
 </div>
 </div>
 
 <div class="grid-item">
 <div class="grid-docu">
-<div><a href="../document/liste">liste des Documents</a></div>
-<div><a href="../document/rech">recherche de documents</a></div>
-<div><a href="../document/add">ajouter un document</a></div>
+<div><a href="<?=$path?>/document/liste">liste des Documents</a></div>
+<div><a href="<?=$path?>/document/rechdocument">recherche de documents</a></div>
+<div><a href="<?=$path?>/document/adddocument">ajouter un document</a></div>
 </div>
 <div class="grid-docu">
-<div><a href="../section/liste">liste des sections</a></div>
-<div><a href="../section/rech">recherche de sections</a></div>
-<div><a href="../section/add">ajouter une section</a></div>
+<div><a href="<?=$path?>/section/liste">liste des sections</a></div>
+<div><a href="<?=$path?>/section/rech">recherche de sections</a></div>
+<div><a href="<?=$path?>/section/add">ajouter une section</a></div>
 
 </div>
 <div class="grid-docu">
-<div><a href="../theme/liste">liste des themes</a></div>
-<div><a href="../theme/rech">recherche de themes</a></div>
-<div><a href="../theme/add">ajouter un theme</a></div>
+<div><a href="<?=$path?>/theme/liste">liste des themes</a></div>
+<div><a href="<?=$path?>/theme/rech">recherche de themes</a></div>
+<div><a href="<?=$path?>/theme/add">ajouter un theme</a></div>
 
 </div>
 <div class="grid-docu">
-<div><a href="../rubrik/liste">liste des rubriques</a></div>
-<div><a href="../rubrik/rech">recherche de rubriques</a></div>
-<div><a href="../rubrik/add">ajouter une rubrique</a></div>
+<div><a href="<?=$path?>/rubrik/liste">liste des rubriques</a></div>
+<div><a href="<?=$path?>/rubrik/rech">recherche de rubriques</a></div>
+<div><a href="<?=$path?>/rubrik/add">ajouter une rubrique</a></div>
 
 </div>
 </div>
