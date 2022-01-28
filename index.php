@@ -110,15 +110,15 @@ if(empty($params[0])) {
 
 
 
-    echo "<br><br><br><br><br><br>";
+    // echo "<br><br><br><br><br><br>";
 
-    echo "<br>controller : ";
-    var_dump ($controller);
-    echo "<br>";
+    // echo "<br>controller : ";
+    // var_dump ($controller);
+    // echo "<br>";
 
-    echo "<br>action : ";
-    var_dump ($action);
-    echo "<br>";
+    // echo "<br>action : ";
+    // var_dump ($action);
+    // echo "<br>";
 
     // echo ROOT;
     // var_dump($_SERVER);
