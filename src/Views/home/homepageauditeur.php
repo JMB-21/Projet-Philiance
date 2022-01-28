@@ -21,12 +21,12 @@ use App\Models\ThemModel;
 
 -->
 
-<?php
+    <p>&nbsp;</p>
 
-?>
-  <div class="titreLeçon">
+    <div class="titreLecon">
             <h2>Tableau de Bord Auditeur</h2>
-  </div>
+    </div>
+    
     <div class="grid-docu">liste des Documents</div>
         <div class="grid-biblio">
             <div class="grid-item">        

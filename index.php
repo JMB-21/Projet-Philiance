@@ -24,6 +24,29 @@ require './vendor/autoload.php';
 
 define('ROOT', __DIR__);
 
+$path ="";
+
+if (isset($_SERVER['HTTPS'])){ 
+        switch ($_SERVER['HTTPS']) {
+        case 'on':
+            $path = "https://www.";
+            break;
+        case 'off':
+            $path = "http://www.";  
+            break;
+        default:
+            $path = "http://";
+            break;
+    } 
+}
+
+$path = $path.$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
+$path = str_replace("index.php", "", $path);
+
+define('BASEURL',$path);
+
+// echo "baseurl : ".BASEURL;
+
 //define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
 //  require_once(ROOT.'src/Models/Model.php');
 //  require_once(ROOT.'src/Controllers/controller.php');
@@ -32,6 +55,8 @@ define('ROOT', __DIR__);
 
 /** trim() : supprimme les caractères `/` au début et à la fin du paramètre passé dans l'url */
 $request = trim($_GET['p'], '/');
+
+
 
 // echo "<br><br><br><br><br><br>";
 // echo "<br>request : ";
@@ -83,18 +108,24 @@ if(empty($params[0])) {
 
 
 
-//  echo "<br><br><br><br><br><br>";
-// // echo "<br>params : ";
-// // var_dump ($params);
-// // echo "<br>";
+    // echo "<br><br><br><br><br><br>";
 
-// echo "<br>controller : ";
-// var_dump ($controller);
-// echo "<br>";
+    // echo "<br>controller : ";
+    // var_dump ($controller);
+    // echo "<br>";
 
-//  echo "<br>action : ";
-//  var_dump ($action);
-//  echo "<br>";
+    // echo "<br>action : ";
+    // var_dump ($action);
+    // echo "<br>";
+
+    // echo ROOT;
+    // var_dump($_SERVER);
+
+    // echo "BASE:".BASEURL;
+    
+    // echo "<br>params : ";
+    // var_dump ($params);
+    // echo "<br>";
 
  
 
@@ -127,7 +158,11 @@ session_start();
         $call->$action($id); 
     } else {       
         //  header('Location: /Projet-Philiance' );      
-        require ROOT . '/src/Views/page404.html';
+        // require ROOT . '/src/Views/page404.html';
+        // $controller = "App\\Controllers\\HomeController"; 
+        // $action = 'home404'; 
+        // $call = new $controller(); 
+        // $call->$action($id);
     }    
  }else{
 
@@ -144,6 +179,12 @@ session_start();
         $call = new $controller();
         $call->$action();
     } else {
-        require ROOT . '/src/Views/404.php';
+        // require ROOT . '/src/Views/404.php';
+        $controller = "App\\Controllers\\HomeController"; 
+        $action = 'home404'; 
+        $call = new $controller(); 
+        $call->$action($id);
     }   
 }
+
+

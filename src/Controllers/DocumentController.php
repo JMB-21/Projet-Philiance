@@ -9,6 +9,7 @@ class DocumentController extends Controller {
 
     
 
+
     public function liste() {       
                       
         $template= "liste/listedocument";                      
@@ -16,7 +17,11 @@ class DocumentController extends Controller {
     }
 
     public function edit($id) {       
-                      
+                   
+        // if (isset($_POST)){
+        //     var_dump($_POST);
+        // }
+
         $template= "edit/editdocument";  
         
         $model      =   new BiblioModel();
@@ -24,9 +29,26 @@ class DocumentController extends Controller {
         $biblio    =   $result->fetch();
         
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
-        $this->render($template, array('biblio' => $biblio)); 
-        
+        $this->render($template, array('biblio' => $biblio));         
     }
+
+    public function modification() {       
+                   
+        if (isset($_POST)){
+            var_dump($_POST);
+        }
+
+        $template= "edit/editdocument";  
+        
+        $model      =   new BiblioModel();
+        $result     =   $model->updatebiblio();
+
+        // $biblio    =   $result->fetch();
+        
+        // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
+        // $this->render($template, array('biblio' => $biblio));         
+    }
+
 
     public function editpdf() {       
                       
@@ -40,8 +62,6 @@ class DocumentController extends Controller {
         $this->render($template);      
     }
 
-
-
     public function supprime($id) {       
                       
         $template="supprime/supprimedocument";  
@@ -51,9 +71,11 @@ class DocumentController extends Controller {
         $biblio    =   $result->fetch();
         
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
-        $this->render($template, array('biblio' => $biblio)); 
-        
+        $this->render($template, array('biblio' => $biblio));         
     }
+
+
+
 
     public function adddocument() {       
                       

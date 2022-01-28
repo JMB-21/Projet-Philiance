@@ -32,63 +32,67 @@
   -->
 
 <?php 
-      $path = "http://localhost/Projet-Philiance";
+      echo "baseurl :".BASEURL;
 ?>
   <p>&nbsp;</p>
 
-  <div class="titreLeçon">
+  <div class="titreLecon">
             <h2>Tableau de Bord Admininistrateur</h2>
   </div>
   <div class="grid-admin">  
     <div class="grid-item">
       <div class="grid-docu">
-        <div><a href="<?=$path?>/auditeur/liste">liste des Auditeurs</a></div>
-        <div><a href="<?=$path?>/rech/rechauditeur/">recherche Auditeur</a></div>
-        <div><a href="<?=$path?>/auditeur/addauditeur">ajouter un Auditeur</a></div>
+        <div><a href="../auditeur/liste">liste des Auditeurs</a></div>
+        <div><a href="<?=BASEURL?>rech/rechauditeur/">recherche Auditeur</a></div>
+        <div><a href="<?=BASEURL?>auditeur/addauditeur">ajouter un Auditeur</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/formateur/liste">liste des formateurs</a></div>
-        <div><a href="<?=$path?>/formateur/rech">recherche formateur</a></div>
-        <div><a href="<?=$path?>/formateur/add">ajouter un formateur</a></div>
+        <div><a href="<?=BASEURL?>formateur/liste">liste des formateurs</a></div>
+        <div><a href="<?=BASEURL?>formateur/rech">recherche formateur</a></div>
+        <div><a href="<?=BASEURL?>formateur/add">ajouter un formateur</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/manager/liste">liste des Managers</a></div>
-        <div><a href="<?=$path?>/manager/rech">recherche manager</a></div>
-        <div><a href="<?=$path?>/manager/add">ajouter un manager</a></div>
+        <div><a href="<?=BASEURL?>manager/liste">liste des Managers</a></div>
+        <div><a href="<?=BASEURL?>manager/rech">recherche manager</a></div>
+        <div><a href="<?=BASEURL?>manager/add">ajouter un manager</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/admin/liste">liste des Administrateurs</a></div>
-        <div><a href="<?=$path?>/admin/add">ajouter un Administrateur</a></div>
+        <div><a href="<?=BASEURL?>admin/liste">liste des Administrateurs</a></div>
+        <div><a href="<?=BASEURL?>admin/add">ajouter un Administrateur</a></div>
       </div>
     </div>
 
     <div class="grid-item">
       <div class="grid-docu">     
 
-        <div><a href="<?=$path?>/document/liste">liste des Documents</a></div>
-        <div><a href="<?=$path?>/document/rechdocument">recherche de documents</a></div>
-        <div><a href="<?=$path?>/document/adddocument">ajouter un document</a></div>
+        <div><a href="<?=BASEURL?>document/liste">liste des Documents</a></div>
+        <div><a href="<?=BASEURL?>document/rechdocument">recherche de documents</a></div>
+        <div><a href="<?=BASEURL?>document/adddocument">ajouter un document</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/section/liste">liste des sections</a></div>
-        <div><a href="<?=$path?>/section/rech">recherche de sections</a></div>
-        <div><a href="<?=$path?>/section/add">ajouter une section</a></div>
+        <div><a href="<?=BASEURL?>section/liste">liste des sections</a></div>
+        <div><a href="<?=BASEURL?>section/rech">recherche de sections</a></div>
+        <div><a href="<?=BASEURL?>section/add">ajouter une section</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/theme/liste">liste des themes</a></div>
-        <div><a href="<?=$path?>/theme/rech">recherche de themes</a></div>
-        <div><a href="<?=$path?>/theme/add">ajouter un theme</a></div>
+        <div><a href="<?=BASEURL?>theme/liste">liste des themes</a></div>
+        <div><a href="<?=BASEURL?>theme/rech">recherche de themes</a></div>
+        <div><a href="<?=BASEURL?>theme/add">ajouter un theme</a></div>
       </div>
 
       <div class="grid-docu">
-        <div><a href="<?=$path?>/rubrik/liste">liste des rubriques</a></div>
-        <div><a href="<?=$path?>/rubrik/rech">recherche de rubriques</a></div>
-        <div><a href="<?=$path?>/rubrik/add">ajouter une rubrique</a></div>
+        <div><a href="<?=BASEURL?>rubrik/liste">liste des rubriques</a></div>
+        <div><a href="<?=BASEURL?>rubrik/rech">recherche de rubriques</a></div>
+        <div><a href="<?=BASEURL?>rubrik/add">ajouter une rubrique</a></div>
+      </div>
+
+      <div class="grid-docu">
+        <div><a href="<?=BASEURL?>news">Gestion Newsletter</a></div>
       </div>
     </div>
   </div>

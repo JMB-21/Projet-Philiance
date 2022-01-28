@@ -34,7 +34,7 @@ class HomeController extends Controller {
 
         }else{    
 
-            $template="home/homepage";
+            $template="home/homepage-s";
             $this->render($template);  
         }       
     }
@@ -92,7 +92,7 @@ class HomeController extends Controller {
                     if(isset($_POST['rememberme'])) {
 						setcookie('email',$mail,time()+3600,null,null,false,true);
 						setcookie('mdp',$mdp,time()+3600,null,null,false,true);	
-                        var_dump($_COOKIE);					
+                        // var_dump($_COOKIE);					
 					}
                 }
             }
@@ -190,8 +190,6 @@ class HomeController extends Controller {
         }
         
     }
-
-
     public function deconnexion() {       
 
         if (isset($_SESSION["newsession"])){  
@@ -216,6 +214,11 @@ class HomeController extends Controller {
         $this->render('home/contact');
     }
 
+    public function home404() {  
+
+        $this->render('home/home-404');
+    }
+
     public function mentions() {         
 
         $this->render('home/mentions');
@@ -234,5 +237,68 @@ class HomeController extends Controller {
     public function support() {         
 
         $this->render('home/support');
+    }
+
+    public function abonnement() {   
+   
+        // Génération d'un MdP temporaire.
+
+        ini_set("sendmail_from","jean-marc-benoist@orange.fr"); 
+        
+        // Adresse de destination.       
+        
+        $mail = $_POST['mail'];
+
+        echo "mail : ".$mail;
+        
+        if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) 
+        {
+            $passage_ligne = "\r\n";
+        }
+        else
+        {
+            $passage_ligne = "\n";
+        }
+        
+        // Message au format texte & HTML.
+        
+        $message_txt = "Bonjour, Merci de votre inscription. Vous receverez votre première newsletter très bientôt   ;-) ";
+        
+        $message_html = "<html><head></head><body>Bonjour,<br><br> Merci de votre inscription.<br><br> Vous recevrez votre première newsletter très bientôt.</body></html>";
+        
+          
+        // Création de la boundary
+        $boundary = "-----=".md5(rand());
+          
+        // Sujet du mail.
+        $sujet = "Votre abonnement à la newsletter Philiance.";
+          
+        // Header du mail.
+        $header = "From: \"Philiance\"<jean-marc-benoist@orange.fr>".$passage_ligne;
+        $header.= "Reply-to: \"Philiance\" <jean-marc-benoist@orange.fr>".$passage_ligne;
+        $header.= "MIME-Version: 1.0".$passage_ligne;
+        $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
+          
+        // Création du message.
+        $message = $passage_ligne.$boundary.$passage_ligne;
+        
+        // Ajout du message au format texte.
+        $message.= "Content-Type: text/plain; charset=UTF-8".$passage_ligne;
+        $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+        $message.= $passage_ligne.$message_txt.$passage_ligne;
+        $message.= $passage_ligne."--".$boundary.$passage_ligne;
+        
+        // Ajout du message au format HTML
+        $message.= "Content-Type: text/html; charset=UTF-8".$passage_ligne;
+        $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+        $message.= $passage_ligne.$message_html.$passage_ligne;
+        $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+        $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+          
+        //=====Envoi de l'e-mail.
+        ini_set("SMTP","smtp.orange.fr");
+        mail($mail,$sujet,$message,$header);   
+
+        $this->render('home/abonnement',array('mail' => $mail));
     }
 }

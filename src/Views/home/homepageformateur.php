@@ -29,7 +29,9 @@
     </style>
 
 <?php 
-      $path = "http://localhost/Projet-Philiance";
+           
+      // echo BASEURL;
+      
 ?>
    
 <!-- 
@@ -41,37 +43,37 @@ Formateurs :
  -->
  <p>&nbsp;</p>
  
- <div class="titreLeçon">
+ <div class="titreLecon">
             <h2>Tableau de Bord Formateur</h2>
   </div>
 <div class="grid-admin">
 
 <div class="grid-item">
 <div class="grid-docu">
-<div><a href="<?=$path?>/auditeur/liste">liste des Auditeurs</a></div>
-<div><a href="<?=$path?>/auditeur/rech">recherche Auditeur</a></div>
+<div><a href="<?=BASEURL?>auditeur/liste">liste des Auditeurs</a></div>
+<div><a href="<?=BASEURL?>auditeur/rech">recherche Auditeur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="<?=$path?>/formateur/liste">liste des formateurs</a></div>
-<div><a href="<?=$path?>/formateur/rech">recherche formateur</a></div>
+<div><a href="<?=BASEURL?>formateur/liste">liste des formateurs</a></div>
+<div><a href="<?=BASEURL?>formateur/rech">recherche formateur</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="<?=$path?>/manager/liste">liste des Managers</a> </div>
-<div><a href="<?=$path?>/manager/rech">recherche manager</a></div>
+<div><a href="<?=BASEURL?>manager/liste">liste des Managers</a> </div>
+<div><a href="<?=BASEURL?>manager/rech">recherche manager</a></div>
 </div>
 
 <div class="grid-docu">
-<div><a href="<?=$path?>/admin/liste">liste des Administrateurs</a></div>
+<div><a href="<?=BASEURL?>admin/liste">liste des Administrateurs</a></div>
 </div>
 </div>
 
 <div class="grid-item">
 <div class="grid-docu">
-   <div><a href="<?=$path?>/document/liste">liste des Documents</a></div>
-   <div><a href="<?=$path?>/document/rechdocument">recherche de documents</a></div>
-   <div><a href="<?=$path?>/document/adddocument">ajouter un document</a></div>   
+   <div><a href="<?=BASEURL?>document/liste">liste des Documents</a></div>
+   <div><a href="<?=BASEURL?>document/rechdocument">recherche de documents</a></div>
+   <div><a href="<?=BASEURL?>document/adddocument">ajouter un document</a></div>   
 </div>
 
 </div>

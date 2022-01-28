@@ -5,10 +5,11 @@ use App\Models\Model;
 use PDO;
 ?>
 
+<p>&nbsp;</p>
 
-<div class="listeLeçon">
+<div class="listeLecon">
     <div class="container">
-        <div class="titreLeçon">
+        <div class="titreLecon">
             <h2>
                 <?php            
                 switch ($variable) {    

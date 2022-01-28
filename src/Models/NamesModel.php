@@ -20,6 +20,9 @@ class NamesModel extends Model  {
         $requete->execute($data);
     }
 
+    
+    
+
      // ** la ligne pseudo/mdp d'une table */
      public function findnam($pseudo,$mdp) {
         

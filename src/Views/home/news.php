@@ -1,5 +1,6 @@
+    
     <p>&nbsp;</p>
     
     <div class="titreLecon">
-        <h2>informations cookies</h2>
+        <h2>Gestion de la newsletter</h2>
     </div>

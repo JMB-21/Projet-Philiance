@@ -23,7 +23,7 @@ abstract class Controller {
         
         extract($data);
 
-         echo "<br>Controller -> Template : ".$template;
+        //  echo "<br>Controller -> Template : ".$template;
         //  var_dump($data);
 
         /** Début de bufferisation de la sortie */
@@ -33,7 +33,7 @@ abstract class Controller {
         
         /** Fin de bufferisation de la sortie et stckage du contenu du buffer dans $content */
         $content = ob_get_clean();
-
+    echo "root :".ROOT;
         // require ROOT . '/src/Views/register2.php';
         require ROOT . '/src/Views/default.php';
     }

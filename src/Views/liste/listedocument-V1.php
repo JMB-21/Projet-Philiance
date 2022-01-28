@@ -13,7 +13,7 @@
 <body>
     <div class="listeLeçon">
         <div class="container">
-               <div class="titreLeçon"> 
+               <div class="titreLecon"> 
                 <h2>Liste des Leçons</h2>   
                </div>  
                

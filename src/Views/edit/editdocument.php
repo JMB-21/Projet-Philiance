@@ -33,7 +33,7 @@
     <div class="col-md-12">
         <div class="row">
             <di class="formSupport">
-                <form action="bddcours.php" method="post" enctype="multipart/form-data">
+            <form method="POST" action="../../document/modification" >                
                     <div>                           
                         <?php   
                         $name = new NamesModel();
@@ -184,9 +184,10 @@
                         <div>
                             <label for="chbx" class="formContenu">En Ligne :</label> 
                             <input id="chbx" name="chbx" type="checkbox"  value="<?php echo $biblio['onlin']?>">
+                            <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
                         </div>
                         <div class="boutton"> 
-                            <button type="submit">Enregistrer</button>
+                            <button type="submit" name="modifabonnement">Enregistrer</button>
                         </div>
                 </form>
         </div>    

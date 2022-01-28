@@ -7,10 +7,11 @@ use App\Models\SupportModel;
 use PDO;
 ?>
 
+<p>&nbsp;</p>
 
-<div class="listeLeçon">
+<div class="listeLecon">
     <div class="container">
-        <div class="titreLeçon">
+        <div class="titreLecon">
             <h2>recherche de documents</h2>
         </div>
 

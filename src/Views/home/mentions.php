@@ -1,6 +1,5 @@
-
-    <section>
-        <div class="ml">
+    
+    <div class="mleg">
             <h1>MENTIONS LEGALES</h1>
                 <div class="txt-leg">
                     <dl class="row">
@@ -58,5 +57,4 @@
                     </dl>
                 </div>
         </div>
-    </section>
 

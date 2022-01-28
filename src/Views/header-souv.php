@@ -20,7 +20,7 @@
          
           <input type="checkbox" name="rememberme" id="remembercheckbox" />
           <label for="remembercheckbox"> Se souvenir de moi</label>
-          <label for="mdpoublie"><a href="mdpoublie">Mot de Passe Oublié ? </a></label>
+          <label for="mdpoublie"><a href="home/mdpoublie">Mot de Passe Oublié ? </a></label>
           
           <button type="submit" class="btn" name="formconnexion">Connexion</button>  
       

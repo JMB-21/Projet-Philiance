@@ -7,10 +7,15 @@ use App\Models\SupportModel;
 use PDO;
 ?>
 
+<p>&nbsp;</p>
 
-<div class="listeLeçon">
-    <div class="container">
-        <div class="titreLeçon">
+    <!-- <div class="container"> -->
+        <!-- <div class="titreLecon"> -->
+
+
+             
+            <div class="titre_contact">
+               
             <h2>Liste des documents</h2>
         </div>
 
@@ -26,7 +31,7 @@ use PDO;
                     die('Erreur : '.$e->getMessage());
             }
         ?>
-        
+        <div class="listeLecon">
         <div class="row"> 
             <div class="col-md-6">
                 <form class="input-group" action="rechdocument" method="post">
@@ -46,7 +51,7 @@ use PDO;
         </div> 
     
 
-    <div class="row listeLeçon"> 
+    <div class="row listeLecon"> 
                   
             <!-- <div class="btnListe">                    
                 <button type="button" class="btn btn-success btn-sm mb-2"><a href="formulaire.html">Inserer</a></button>
