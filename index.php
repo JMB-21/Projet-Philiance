@@ -38,6 +38,8 @@ if (isset($_SERVER['HTTPS'])){
             $path = "http://";
             break;
     } 
+}else{
+    $path = "http://";
 }
 
 $path = $path.$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'];
@@ -45,7 +47,7 @@ $path = str_replace("index.php", "", $path);
 
 define('BASEURL',$path);
 
-// echo "baseurl : ".BASEURL;
+// echo "baseurl : ".BASEURL."<br>";
 
 //define('ROOT', str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']));
 //  require_once(ROOT.'src/Models/Model.php');
@@ -108,15 +110,15 @@ if(empty($params[0])) {
 
 
 
-    // echo "<br><br><br><br><br><br>";
+    echo "<br><br><br><br><br><br>";
 
-    // echo "<br>controller : ";
-    // var_dump ($controller);
-    // echo "<br>";
+    echo "<br>controller : ";
+    var_dump ($controller);
+    echo "<br>";
 
-    // echo "<br>action : ";
-    // var_dump ($action);
-    // echo "<br>";
+    echo "<br>action : ";
+    var_dump ($action);
+    echo "<br>";
 
     // echo ROOT;
     // var_dump($_SERVER);
@@ -159,10 +161,10 @@ session_start();
     } else {       
         //  header('Location: /Projet-Philiance' );      
         // require ROOT . '/src/Views/page404.html';
-        // $controller = "App\\Controllers\\HomeController"; 
-        // $action = 'home404'; 
-        // $call = new $controller(); 
-        // $call->$action($id);
+        $controller = "App\\Controllers\\HomeController"; 
+        $action = 'home404'; 
+        $call = new $controller(); 
+        $call->$action($id);
     }    
  }else{
 

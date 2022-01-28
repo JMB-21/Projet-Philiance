@@ -7,7 +7,7 @@ use PDO;
 
 <p>&nbsp;</p>
 
-<div class="listeLecon">
+<div class="listeLeçon">
     <div class="container">
         <div class="titreLecon">
             <h2>

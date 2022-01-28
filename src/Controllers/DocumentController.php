@@ -10,22 +10,27 @@ class DocumentController extends Controller {
     
 
 
-    public function liste() {       
+    public function liste() {     
+        
+        $model      =   new BiblioModel();
+        $result     =   $model->findall();
+        $biblio    =   $result->fetchall();
+
                       
         $template= "liste/listedocument";                      
-        $this->render($template); 
+        $this->render($template, array('biblio' => $biblio)); 
     }
 
-    public function edit($id) {       
+    public function edit() {       
                    
-        // if (isset($_POST)){
-        //     var_dump($_POST);
-        // }
+        if (isset($_POST)){
+             var_dump($_POST);
+         }
 
         $template= "edit/editdocument";  
         
         $model      =   new BiblioModel();
-        $result     =   $model->find('idb',$id);
+        $result     =   $model->find('idb',$_POST['id']);
         $biblio    =   $result->fetch();
         
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 

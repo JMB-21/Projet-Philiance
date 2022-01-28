@@ -9,15 +9,15 @@
         
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="http://localhost/projet-philiance/assets/img/nurseb.png" class="d-block w-100" alt="dernier cours 1" title="dernier cours 1" height="700px">
+            <img src="<?=BASEURL?>assets/img/nurseb.png" class="d-block w-100" alt="dernier cours 1" title="dernier cours 1" height="700px">
           </div>
 
           <div class="carousel-item">
-            <img src="http://localhost/projet-philiance/assets/img/cours-2.jpg" class="d-block w-100" alt="dernier cours 2" title="dernier cours 2" height="700px">
+            <img src="<?=BASEURL?>assets/img/cours-2.jpg" class="d-block w-100" alt="dernier cours 2" title="dernier cours 2" height="700px">
           </div>
 
           <div class="carousel-item">
-            <img src="http://localhost/projet-philiance/assets/img/cours-3.jpg" class="d-block w-100" alt="dernier cours 3" title="dernier cours 3" height="700px">
+            <img src="<?=BASEURL?>assets/img/cours-3.jpg" class="d-block w-100" alt="dernier cours 3" title="dernier cours 3" height="700px">
           </div>            
         </div>
 
@@ -35,7 +35,7 @@
 
       <div class="card-nl">
         <div class="text-center">
-          <img src="http://localhost/projet-philiance/assets/img/newsletter2.svg" width="160px"> <span class="d-block mt-3">Abonnez-vous à notre newsletter pour ne pas manquer nos nouveaux cours. </span>
+          <img src="<?=BASEURL?>assets/img/newsletter2.svg" width="160px"> <span class="d-block mt-3">Abonnez-vous à notre newsletter pour ne pas manquer nos nouveaux cours. </span>
           <div class="nletter">
               <div class="input-group mb-3 mt-4">
                   <input type="text" class="form-control" placeholder="Entrez votre email" aria-label="Recipient's username" aria-describedby="button-addon2"> 

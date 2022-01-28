@@ -21,7 +21,17 @@ abstract class Model {
     public function getInstance() {
         if( self::$instance === null) {
             try {
-                self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc', 'root', '');
+              
+               $mot=substr_count(BASEURL,'localhost');              
+
+                if ($mot === 0) {
+                    echo "distant";
+                    self::$instance = new PDO('mysql:host= db5006433601.hosting-data.io', ' dbu851630', 'philiance22');                     
+                } else {
+                    echo "local";
+                    self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc', 'root', '');                
+                }     
+                
             } catch( PDOException $e) {
                 die($e->getMessage());
             }

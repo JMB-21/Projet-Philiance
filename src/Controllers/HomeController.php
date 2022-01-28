@@ -34,7 +34,7 @@ class HomeController extends Controller {
 
         }else{    
 
-            $template="home/homepage-s";
+            $template="home/homepage";
             $this->render($template);  
         }       
     }

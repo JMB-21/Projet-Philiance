@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="<?=BASEURL?>assets/css/boxicons.min.css">
    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" href="<?=BASEURL?>assets/css/style.css">
+   <link rel="stylesheet" href="<?=BASEURL?>assets/css/style-register.css">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

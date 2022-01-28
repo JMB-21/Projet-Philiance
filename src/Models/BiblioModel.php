@@ -41,7 +41,7 @@ class BiblioModel extends Model  {
         // 'id' => string '2' (length=1)
 
         // $sql = "UPDATE {$this->table} SET `idb`=$_POST['id'],`idroit`=$_POST['id'],`onlin`=[value-7],`chem`=[value-8],`titre`=[value-9],`reference`=[value-10],`comment`=[value-11],`creatdate`=[value-12],`duree`=[value-13]";       
-        echo $sql;
+        // echo $sql;
         // $requete = $this->getInstance()->prepare($sql);
         // $requete->execute($data);
     }
