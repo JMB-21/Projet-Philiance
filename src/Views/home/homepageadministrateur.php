@@ -32,7 +32,7 @@
   -->
 
 <?php 
-      echo "baseurl :".BASEURL;
+      // echo "baseurl :".BASEURL;
 ?>
   <p>&nbsp;</p>
 

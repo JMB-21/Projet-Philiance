@@ -25,10 +25,10 @@ abstract class Model {
                $mot=substr_count(BASEURL,'localhost');              
 
                 if ($mot === 0) {
-                    echo "distant";
+                    // echo "distant";
                     self::$instance = new PDO('mysql:host= db5006433601.hosting-data.io', ' dbu851630', 'philiance22');                     
                 } else {
-                    echo "local";
+                    // echo "local";
                     self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc', 'root', '');                
                 }     
                 

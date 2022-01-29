@@ -76,7 +76,7 @@ use App\Models\ThemModel;
                 $mod     =   new ThemModel();        
                 $res     =   $mod->find('idth',$id);                        
                 $rub    =   $res->fetch();  
-                echo $rub['them'];  
+                // echo $rub['them'];  
                 ?> 
             </div>
 
@@ -86,7 +86,7 @@ use App\Models\ThemModel;
                     $rub = $biblio['idrubrik'];
                     $row = array_search($rub,$col);                                   
                     $valrow = $rubrik[$row]; 
-                    echo $valrow['nom'];                
+                    // echo $valrow['nom'];                
                 ?> 
             </div>
 

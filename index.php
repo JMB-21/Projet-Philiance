@@ -110,20 +110,20 @@ if(empty($params[0])) {
 
 
 
-    echo "<br><br><br><br><br><br>";
+    // echo "<br><br><br><br><br><br>";
 
-    echo "<br>controller : ";
-    var_dump ($controller);
-    echo "<br>";
+    // echo "<br>controller : ";
+    // var_dump ($controller);
+    // echo "<br>";
 
-    echo "<br>action : ";
-    var_dump ($action);
-    echo "<br>";
+    // echo "<br>action : ";
+    // var_dump ($action);
+    // echo "<br>";
 
-    echo "ROOT : ".ROOT."<br>";
+    // echo "ROOT : ".ROOT."<br>";
     
 
-    echo "BASE:".BASEURL."<br>";
+    // echo "BASE:".BASEURL."<br>";
     
     // echo "<br>params : ";
     // var_dump ($params);
@@ -147,7 +147,7 @@ if(empty($params[0])) {
 
      session_start();
 
-     var_dump($_SERVER);
+    //  var_dump($_SERVER);
 
 // var_dump($_SESSION);
 
@@ -161,14 +161,13 @@ if(empty($params[0])) {
         // echo "method_exists";
         $call = new $controller(); 
         $call->$action($id); 
-    } else {   
-        Echo "redir-1";    
+    } else {              
         //  header('Location: /Projet-Philiance' );      
         // require ROOT . '/src/Views/page404.html';
-        // $controller = "App\\Controllers\\HomeController"; 
-        // $action = 'home404'; 
-        // $call = new $controller(); 
-        // $call->$action($id);
+        $controller = "App\\Controllers\\HomeController"; 
+        $action = 'home404'; 
+        $call = new $controller(); 
+        $call->$action($id);
     }    
  }else{
 
@@ -184,13 +183,11 @@ if(empty($params[0])) {
     if( method_exists( $controller, $action )) {
         $call = new $controller();
         $call->$action();
-    } else {
-        Echo "redir-2";
-        // require ROOT . '/src/Views/404.php';
-        // $controller = "App\\Controllers\\HomeController"; 
-        // $action = 'home404'; 
-        // $call = new $controller(); 
-        // $call->$action($id);
+    } else {        
+        $controller = "App\\Controllers\\HomeController"; 
+        $action = 'home404'; 
+        $call = new $controller(); 
+        $call->$action($id);
     }   
 }
 
