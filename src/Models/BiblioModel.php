@@ -81,7 +81,7 @@ class BiblioModel extends Model  {
     //     protected $table = 'rubrik'; 
     // }
 
-    // class ThemModel extends Model  {
+    // class thememodel extends Model  {
 
     //     protected $table = 'theme'; 
     // }

@@ -2,7 +2,7 @@
 namespace App\Controllers;
 use App\Controllers\Controller;
 use App\Models\Model;
-use App\Models\ThemModel;
+use App\Models\thememodel;
 use App\Models\SupportModel;
 use PDO;
 ?>

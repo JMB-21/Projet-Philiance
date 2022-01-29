@@ -1,26 +1,5 @@
  <!-- Navbar -->
- <header>
-        <a href="#"><img src="<?=BASEURL?>assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Notre catalogue</a>
-                    <ul>
-                        <li><a href="#">Informatique</a></li>
-                        <li><a href="#">Langues</a></li>
-                        <li><a href="#">Métiers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Mode de formation</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="#"><i class="far fa-user-circle"></i></a>
-            </div>
-        </nav>        
-    </header>
-
+ 
     <!-- Carousel -->
     <section class="home-sd-carousel">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">

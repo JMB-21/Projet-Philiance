@@ -4,7 +4,7 @@ use App\Controllers\Controller;
 use App\Models\Model;
 use App\Models\BiblioModel;
 use App\Models\RubrikModel;
-use App\Models\ThemModel;
+use App\Models\thememodel;
 ?>
 
 
@@ -73,7 +73,7 @@ use App\Models\ThemModel;
                 $rub    =   $res->fetch();  
                  
                 $id= $rub['idthem'];   
-                $mod     =   new ThemModel();        
+                $mod     =   new thememodel();        
                 $res     =   $mod->find('idth',$id);                        
                 $rub    =   $res->fetch();  
                 // echo $rub['them'];  

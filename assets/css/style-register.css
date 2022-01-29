@@ -23,7 +23,7 @@
 
 /* The popup form - hidden by default */
 .form-popup {
-  /* display: none;  */
+  display: none;  
   position: fixed; 
   top: 50px; 
   /* bottom: 0; */
