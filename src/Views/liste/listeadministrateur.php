@@ -1,7 +1,7 @@
 
     <p>&nbsp;</p>
 
-    <div class="titreLecon">
+    <div class="titreleçon">
         <h2>Liste des administrateurs</h2>
     </div> 
     

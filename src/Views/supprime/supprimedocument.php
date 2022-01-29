@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 
-<div class="titreLecon">
+<div class="titreleçon">
             <h2>Suppression du Document</h2>
     </div> 
 <?php

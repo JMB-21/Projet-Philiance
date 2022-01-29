@@ -43,7 +43,7 @@ Formateurs :
  -->
  <p>&nbsp;</p>
  
- <div class="titreLecon">
+ <div class="titreleçon">
             <h2>Tableau de Bord Formateur</h2>
   </div>
 <div class="grid-admin">

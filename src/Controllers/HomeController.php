@@ -9,7 +9,7 @@ use App\Models\Model;
 use App\Models\RulesModel;
 use App\Models\BiblioModel;
 use App\Models\RubrikModel;
-use App\Models\ThemModel;
+use App\Models\ThemeModel;
 use App\Models\SupportModel;
 
 class HomeController extends Controller {
@@ -25,7 +25,7 @@ class HomeController extends Controller {
             $result = $model->findAll();
             $rubrik = $result->fetchAll();
             
-            $model = new ThemModel();
+            $model = new ThemeModel();
             $result = $model->findAll();
             $theme = $result->fetchAll();             
                          
@@ -110,7 +110,7 @@ class HomeController extends Controller {
             $result     =   $model->findAll();
             $rubrik    =   $result->fetchAll();
             
-            $model     =   new ThemModel();
+            $model     =   new ThemeModel();
             $result     =   $model->findAll();
             $theme    =   $result->fetchAll();
                 
@@ -173,7 +173,7 @@ class HomeController extends Controller {
             $result     =   $model->findAll();
             $rubrik    =   $result->fetchAll();
             
-            $model     =   new ThemModel();
+            $model     =   new ThemeModel();
             $result     =   $model->findAll();
             $theme    =   $result->fetchAll();
                 
@@ -249,56 +249,81 @@ class HomeController extends Controller {
         
         $mail = $_POST['mail'];
 
-        echo "mail : ".$mail;
+        echo "mail : ".$mail."<br>";  
         
-        if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) 
+        if (preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $mail)) 
         {
-            $passage_ligne = "\r\n";
-        }
-        else
-        {
-            $passage_ligne = "\n";
-        }
-        
-        // Message au format texte & HTML.
-        
-        $message_txt = "Bonjour, Merci de votre inscription. Vous receverez votre première newsletter très bientôt   ;-) ";
-        
-        $message_html = "<html><head></head><body>Bonjour,<br><br> Merci de votre inscription.<br><br> Vous recevrez votre première newsletter très bientôt.</body></html>";
-        
-          
-        // Création de la boundary
-        $boundary = "-----=".md5(rand());
-          
-        // Sujet du mail.
-        $sujet = "Votre abonnement à la newsletter Philiance.";
-          
-        // Header du mail.
-        $header = "From: \"Philiance\"<jean-marc-benoist@orange.fr>".$passage_ligne;
-        $header.= "Reply-to: \"Philiance\" <jean-marc-benoist@orange.fr>".$passage_ligne;
-        $header.= "MIME-Version: 1.0".$passage_ligne;
-        $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
-          
-        // Création du message.
-        $message = $passage_ligne.$boundary.$passage_ligne;
-        
-        // Ajout du message au format texte.
-        $message.= "Content-Type: text/plain; charset=UTF-8".$passage_ligne;
-        $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-        $message.= $passage_ligne.$message_txt.$passage_ligne;
-        $message.= $passage_ligne."--".$boundary.$passage_ligne;
-        
-        // Ajout du message au format HTML
-        $message.= "Content-Type: text/html; charset=UTF-8".$passage_ligne;
-        $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
-        $message.= $passage_ligne.$message_html.$passage_ligne;
-        $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-        $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
-          
-        //=====Envoi de l'e-mail.
-        ini_set("SMTP","smtp.orange.fr");
-        mail($mail,$sujet,$message,$header);   
+                
+            if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail))
+            {
+                $passage_ligne = "\r\n"; // pour hotmail|live|msn
+            }
+            else
+            {
+                $passage_ligne = "\n"; 
+            } 
 
-        $this->render('home/abonnement',array('mail' => $mail));
+            // Message au format texte & HTML.
+            
+            $message_txt = "Bonjour, Merci de votre inscription. Vous receverez votre première newsletter très bientôt   ;-) ";
+            
+            $message_html = "<html><head></head><body>Bonjour,<br><br> Merci de votre inscription.<br><br> Vous recevrez votre première newsletter très bientôt.</body></html>";
+            
+            
+            // Création de la boundary
+            $boundary = "-----=".md5(rand());
+            
+            // Sujet du mail.
+            $sujet = "Votre abonnement à la newsletter Philiance.";
+            
+            // Header du mail.
+            $header = "From: \"Philiance\"<jean-marc-benoist@orange.fr>".$passage_ligne;
+            $header.= "Reply-to: \"Philiance\" <jean-marc-benoist@orange.fr>".$passage_ligne;
+            $header.= "MIME-Version: 1.0".$passage_ligne;
+            $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
+            
+            // Création du message.
+            $message = $passage_ligne.$boundary.$passage_ligne;
+            
+            // Ajout du message au format texte.
+            $message.= "Content-Type: text/plain; charset=UTF-8".$passage_ligne;
+            $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+            $message.= $passage_ligne.$message_txt.$passage_ligne;
+            $message.= $passage_ligne."--".$boundary.$passage_ligne;
+            
+            // Ajout du message au format HTML
+            $message.= "Content-Type: text/html; charset=UTF-8".$passage_ligne;
+            $message.= "Content-Transfer-Encoding: 8bit".$passage_ligne;
+            $message.= $passage_ligne.$message_html.$passage_ligne;
+            $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+            $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
+            
+            //=====Envoi de l'e-mail.
+            ini_set("SMTP","smtp.orange.fr");
+            // mail($mail,$sujet,$message,$header);   
+
+        
+            echo "mail Envoi : ".$mail."<br>"; 
+
+            $res = mail($mail,$sujet,$message,$header);
+
+            if ($res == true){            
+                // mail Ok
+                $this->render('home/abonnement',array('mail' => $mail));
+            }else{
+
+                // Mail KO            
+                $this->render('home/abonnementko',array('mail' => $mail));
+            } 
+
+    }else{
+            // Mail non conforme
+            echo "Mail non conforme";
+            $this->render('home/abonnomail',array('mail' => $mail));
+            
+        }
+           
+
     }
+   
 }

@@ -3,7 +3,7 @@
 	<div class="container">
         <div class="row">
             <div class="titre_contact">
-                <div class="titreLecon">
+                <div class="titreleçon">
                    <h2>Contactez nous...</h2>
                 </div>
             </div>    

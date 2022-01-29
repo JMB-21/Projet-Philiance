@@ -1,6 +1,6 @@
     <p>&nbsp;</p>
 
-    <div class="titreLecon">
+    <div class="titreleçon">
             <h2>Liste des rubriques</h2>
     </div> 
 

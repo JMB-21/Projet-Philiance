@@ -1,6 +1,6 @@
-<p>&nbsp;</p>
+        <p>&nbsp;</p>
         
-        <div class="titreLecon">
+        <div class="titreleçon">
             <h2>abonnement a notre newsletter</h2>
         </div>
         <div class="card-nl">
@@ -17,6 +17,4 @@
                 </div>
             </div>
         </div>
-        <?php
-        
-        ?>
+       

@@ -34,7 +34,7 @@ Managers :
  -->
  <p>&nbsp;</p>
 
-<div class="titreLecon">
+<div class="titreleçon">
     <h2>Tableau de Bord Manager</h2>
 </div>
 

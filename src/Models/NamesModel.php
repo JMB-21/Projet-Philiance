@@ -63,5 +63,15 @@ class NamesModel extends Model  {
         return $this->getInstance()->query($sql);
     }
 
-    
-}
+    public function verifmail($mail) {
+        if (preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $mail)) 
+        {
+            echo"mail ok";
+        }
+        else
+        {
+            echo"mail ko";
+        }
+        return $this->getInstance()->query($rep);
+    }
+}    

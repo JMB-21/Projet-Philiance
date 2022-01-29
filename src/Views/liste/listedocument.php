@@ -126,7 +126,7 @@ use PDO;
                                                 </form>  
                                                 
             
-                                                <button type="button" class="btn btn-success btn-sm mb-2"><a href="supprime">Supprimer</a></button>
+                                               
                                             </div>
                                         </div>
                                     </div>

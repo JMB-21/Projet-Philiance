@@ -1,52 +1,76 @@
-   
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#" data-bs-slide-to="2" aria-label="Slide 3"></button>
+ <!-- Navbar -->
+ <header>
+        <a href="#"><img src="<?=BASEURL?>assets/img/logo_Philiance_formation-small.png" class="card-img-top" alt="Logo Philiance Formation" title="Logo Philiance"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Notre catalogue</a>
+                    <ul>
+                        <li><a href="#">Informatique</a></li>
+                        <li><a href="#">Langues</a></li>
+                        <li><a href="#">Métiers</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Mode de formation</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="far fa-user-circle"></i></a>
+            </div>
+        </nav>        
+    </header>
+
+    <!-- Carousel -->
+    <section class="home-sd-carousel">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    
+            <div class="carousel-controls">
+                <ol class="carousel-indicators">
+                <li data-bs-target="#carousel" data-bs-slide-to="0" class="active" style="background-image: url(<?=BASEURL?>assets/img/nurseb.png);"></li>
+                <li data-bs-target="#carousel" data-bs-slide-to="1" style="background-image: url(<?=BASEURL?>assets/img/hygiene2.jpg);"></li>
+                <li data-bs-target="#carousel" data-bs-slide-to="2" style="background-image: url(<?=BASEURL?>assets/img/alimentationb.jpg);"></li>
+                </ol>
+        
+                <a class="carousel-control-prev" role="button" data-bs-slide="prev" href="#carousel">
+                <img src="<?=BASEURL?>assets/img/left-arrow.svg" alt="Previous">
+                </a>
+                <a class="carousel-control-next" role="button" data-bs-slide="next" href="#carousel">
+                <img src="<?=BASEURL?>assets/img/right-arrow.svg" alt="Next">
+                </a>
+
         </div>
         
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="<?=BASEURL?>assets/img/nurseb.png" class="d-block w-100" alt="dernier cours 1" title="dernier cours 1" height="700px">
-          </div>
 
-          <div class="carousel-item">
-            <img src="<?=BASEURL?>assets/img/cours-2.jpg" class="d-block w-100" alt="dernier cours 2" title="dernier cours 2" height="700px">
-          </div>
-
-          <div class="carousel-item">
-            <img src="<?=BASEURL?>assets/img/cours-3.jpg" class="d-block w-100" alt="dernier cours 3" title="dernier cours 3" height="700px">
-          </div>            
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Avant</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Suivant</span>
-        </button>
-      </div>  
-
-      <!-- Newsletter -->
-
-      <div class="card-nl">
-        <div class="text-center">
-          <img src="<?=BASEURL?>assets/img/newsletter2.svg" width="160px"> <span class="d-block mt-3">Abonnez-vous à notre newsletter pour ne pas manquer nos nouveaux cours. </span>
-          <div class="nletter">
-              <div class="input-group mb-3 mt-4">
-                  <input type="text" class="form-control" placeholder="Entrez votre email" aria-label="Recipient's username" aria-describedby="button-addon2"> 
-                  <button class="btn btn-success border-rad" type="button" id="button-addon2">Abonnez-vous !</button>
-              </div>
-          </div>
-        </div>
-      </div>   
-
-  
+            <div class="carousel-item active" style="background-image: url(<?=BASEURL?>assets/img/nurse.png);">
+                <div class="container"> 
+                    <h1 class="spe">COMMUNICATION</h1>
+                    <h3>La relation soignant / soigné.</h3>
+                    <br>
+                    <p><a href="#" class="btn btn-primary rounded-0">En savoir +</a></p>              
+                </div>
+            </div>
 
     
-
+            <div class="carousel-item" style="background-image: url(<?=BASEURL?>assets/img/hygiene2.jpg);">
+                <div class="container">
+                    <h1 class="spe">HYGIÈNE</h1>
+                    <h3>Maîtrise de la biocontamination.</h3>
+                    <br>
+                    <p><a href="#" class="btn btn-primary rounded-0">En savoir +</a></p>               
+                </div>
+            </div>
     
+            <div class="carousel-item" style="background-image: url(<?=BASEURL?>assets/img/alimentation.jpg);">
+                <div class="container">
+                    <h1 class="spe">ALIMENTATION</h1>
+                    <h3>Aide au repas :<br>prévention de la dénutrition<br>et de la déshydratation.</h3>
+                    <br>
+                    <p><a href="#" class="btn btn-primary rounded-0">En savoir +</a></p>               
+                </div>
+            </div>
+        
+        </div>
+
+    </section>

@@ -1,4 +1,4 @@
-<div class="titreLecon">
+<div class="titreleçon">
             <h2>questions frequentes</h2>
         </div>
 

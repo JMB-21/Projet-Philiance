@@ -9,7 +9,7 @@ use PDO;
 
 <div class="listeLeçon">
     <div class="container">
-        <div class="titreLecon">
+        <div class="titreleçon">
             <h2>
                 <?php            
                 switch ($variable) {    

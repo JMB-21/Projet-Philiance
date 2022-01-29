@@ -11,7 +11,7 @@ use PDO;
 
 <div class="listeLeçon">
     <div class="container">
-        <div class="titreLecon">
+        <div class="titreleçon">
             <h2>recherche de documents</h2>
         </div>
 

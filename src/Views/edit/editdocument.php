@@ -24,11 +24,10 @@
 // var_dump($biblio);
 ?>
 
-<body class="nir"> 
-    <!-- Navbar -->    
+<div class="nir">   
 
     <div class="banere" style="background-image:url(<?=BASEURL?>assets/img/banere.jpg);">
-         <img src="" alt="">
+         <!-- <img src="" alt=""> -->
             <div class="container">
                 <div class="titreBanere">
                      <h1> FORMATION MÉDICO-SOCIAL</h1>
@@ -45,7 +44,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="formSupport">
-                        <form method="POST" action="<?=BASEURL?>document/modification" >                
+                        <form method="POST" action="<?=BASEURL?>document/modification" id="docform">                
                             <div>                           
                                 <?php   
                                 $name = new NamesModel();
@@ -130,8 +129,8 @@
                             </div>                       
                                                                         
                             <div>
-                                <label for="Txt9" class="formContenu">Résumé</label> 
-                                <textarea  id="contenu" name="contenu" type="text" ><?php echo $biblio['comment']?></textarea>
+                                <label for="Txt9" class="formContenu">Résumé</label>
+                                <textarea name="contenu" form="docform"  rows="10" cols="20"><?php echo $biblio['comment']?></textarea> 
                             </div> 
 
                             <div>
@@ -145,23 +144,23 @@
                                     switch ($_SESSION['role']) {
                                         case '1':
                                 ?>            
-                                            Administrateur <input id="chbx" name="Adm" type="checkbox"  value="Administrateur">&nbsp;&nbsp;&nbsp;
-                                            Manager <input id="chbx" name="Man" type="checkbox"  value="Manager">&nbsp;&nbsp;&nbsp;
-                                            Formateur <input id="chbx" name="For" type="checkbox"  value="Formateur">&nbsp;&nbsp;&nbsp;
-                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="Auditeur"></label> 
+                                            Administrateur <input id="chbx" name="Adm" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
+                                            Manager <input id="chbx" name="Man" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
+                                            Formateur <input id="chbx" name="For" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
+                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="1"></label> 
                                 <?php
                                             break;
                                         case '2': 
                                 ?>
-                                            <label for="Txt8" class="formContenu">Manager <input id="chbx" name="Man" type="checkbox"  value="Manager">&nbsp;&nbsp;&nbsp;
-                                            <label for="Txt8" class="formContenu">Formateur <input id="chbx" name="For" type="checkbox"  value="Formateur">&nbsp;&nbsp;&nbsp; 
-                                            <label for="Txt8" class="formContenu">Autiteur <input id="chbx" name="Aud" type="checkbox"  value="Auditeur"></label> 
+                                            Manager <input id="chbx" name="Man" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
+                                            Formateur <input id="chbx" name="For" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp; 
+                                            Autiteur <input id="chbx" name="Aud" type="checkbox"  value="1"></label> 
                                 <?php
                                             break;
                                         case '3':   
                                 ?>           
-                                            Formateur <input id="chbx" name="For" type="checkbox" value="Formateur">&nbsp;&nbsp;&nbsp;  
-                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="Auditeur"></label>
+                                            Formateur <input id="chbx" name="For" type="checkbox" value="1">&nbsp;&nbsp;&nbsp;  
+                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="1"></label>
                                             
                                 <?php            
                                             break;
@@ -200,10 +199,12 @@
                                 <button type="submit" name="modifabonnement">Enregistrer</button>
                             </div>
                         </form>
+
+                        <!-- <textarea name="contenu" form="docform" ><?php echo $biblio['comment']?></textarea> -->
+                        <!-- <textarea name="comment" form="usrform">Enter text here...</textarea> -->
                     </div>    
                 </div>    
             </div> 
         </div> 
     </div> 
-</body>
-</html>
+</div>

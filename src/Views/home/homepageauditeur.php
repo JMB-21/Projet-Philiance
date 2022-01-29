@@ -23,7 +23,7 @@ use App\Models\ThemModel;
 
     <p>&nbsp;</p>
 
-    <div class="titreLecon">
+    <div class="titreleçon">
             <h2>Tableau de Bord Auditeur</h2>
     </div>
     
