@@ -26,7 +26,7 @@ abstract class Model {
 
                 if ($mot === 0) {
                     // echo "distant";
-                    self::$instance = new PDO('mysql:host= db5006433601.hosting-data.io', ' dbu851630', 'philiance22');                     
+                    self::$instance = new PDO('mysql:host=db5006433601.hosting-data.io', ' dbu851630', 'philiance22');                     
                 } else {
                     // echo "local";
                     self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc', 'root', '');                
