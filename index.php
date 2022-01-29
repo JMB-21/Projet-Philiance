@@ -29,7 +29,7 @@ $path ="";
 if (isset($_SERVER['HTTPS'])){ 
         switch ($_SERVER['HTTPS']) {
         case 'on':
-            $path = "https://www.";
+            $path = "https://";
             break;
         case 'off':
             $path = "http://www.";  
