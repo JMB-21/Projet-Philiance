@@ -28,13 +28,13 @@ class BiblioModel extends Model  {
     public function updatebiblio() {
 
         if (isset($_POST)){
-            $Txt1 = $_POST['Txt1'];
-            $Txt0 = $_POST['Txt0'];
-            $Txt2 = $_POST['Txt2'];
-            $cont = $_POST['contenu'];
-            $Txt7 = $_POST['Txt7'];
-            $Txt8 = $_POST['Txt8'];
-            $Txt6 = $_POST['Txt6'];
+            $Txt1 = strip_tags($_POST['Txt1']);
+            $Txt0 = strip_tags($_POST['Txt0']);
+            $Txt2 = strip_tags($_POST['Txt2']);
+            $cont = strip_tags($_POST['contenu']);
+            $Txt7 = strip_tags($_POST['Txt7']);
+            $Txt8 = strip_tags($_POST['Txt8']);
+            $Txt6 = strip_tags($_POST['Txt6']);
             $id = $_POST['id'];
 
             if(isset($_POST['chbx'])){
@@ -71,13 +71,26 @@ class BiblioModel extends Model  {
 
             // $cont = real_escape_string($cont);            
 
-            $Txt0 = $this->getInstance()->quote($Txt0)."\n";
-            echo "<br>Txt0 :".$Txt0."<br>";
+            // $Txt0 = $this->getInstance()->quote($Txt0)."\n";
+            // echo "<br>Txt0 :".$Txt0."<br>";
             
-            $sql = "UPDATE {$this->table} SET idroitad='$adm', idroitma='$man', idroitfo='$fm', idroitau='$aud', onlin='$onlin', chem='$Txt8', titre=$Txt0, reference='$Txt2', comment='$cont',duree='$Txt7' WHERE idb='$id'";       
-            echo $sql;        
+            $sql = "UPDATE {$this->table} SET idroitad= :idroitad, idroitma=:idroitma, idroitfo=:idroitfo, idroitau=:idroitau, onlin=:onlin, chem=:chem, titre=:titre, reference=:reference, comment=:comment,duree=:duree WHERE idb=:idb";       
+            // echo $sql;        
             $requete = $this->getInstance()->prepare($sql);  
-            $requete->execute();
+            $requete->execute(array(
+                'idroitad'=>$adm, 
+                'idroitma'=>$man, 
+                'idroitfo'=>$fm, 
+                'idroitau'=>$aud,
+                'onlin'=>$onlin,
+                'chem'=>$Txt8,
+                'titre'=>$Txt0,
+                'reference'=>$Txt2,
+                'comment'=>$cont,
+                'duree'=>$Txt7,
+                'idb'=>$id,
+            ));
+
     }
        
     }        

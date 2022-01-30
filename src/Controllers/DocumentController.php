@@ -40,7 +40,7 @@ class DocumentController extends Controller {
     public function modification() {       
                    
         if (isset($_POST)){
-            var_dump($_POST);           
+            // var_dump($_POST);           
         }
 
         $template= "edit/editdocument";  

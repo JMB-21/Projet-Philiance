@@ -42,7 +42,7 @@
   <div class="grid-admin">  
     <div class="grid-item">
       <div class="grid-docu">
-        <div><a href="../auditeur/liste">liste des Auditeurs</a></div>
+        <div><a href="<?=BASEURL?>auditeur/liste">liste des Auditeurs</a></div>
         <div><a href="<?=BASEURL?>rech/rechauditeur/">recherche Auditeur</a></div>
         <div><a href="<?=BASEURL?>auditeur/addauditeur">ajouter un Auditeur</a></div>
       </div>

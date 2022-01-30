@@ -131,6 +131,7 @@
                             <div>
                                 <label for="Txt9" class="formContenu">Résumé</label>
                                 <textarea name="contenu" form="docform"  rows="10" cols="20"><?php echo $biblio['comment']?></textarea> 
+                                <!-- <div><?php //echo nl2br($biblio['comment'])?></div> -->
                             </div> 
 
                             <div>
