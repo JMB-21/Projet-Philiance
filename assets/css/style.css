@@ -97,7 +97,7 @@ body .nir{
 }
 
 .nir h1,.nir h2, .nir h3, .nir h4, .nir h5, .nir h6 {
-   font-weight: 700;
+   /* font-weight: 700; */
    letter-spacing: 1px;
    text-transform: uppercase;
    color: #283891;
@@ -1037,7 +1037,7 @@ button:hover {
 
 /*mentions legales-sd*/
 .mleg {
-   padding-top: 150px;
+   /* padding-top: 150px; */
    padding-bottom: 20px;
    padding-left: 100px;
 }
@@ -1328,7 +1328,7 @@ section.sd-faq {
 
 /*navbar-sd*/
 header {
-   position: fixed;
+   position: relative;
    top: 0;
    width: 100%;
    background-color: #6d9edd;

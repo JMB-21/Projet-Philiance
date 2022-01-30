@@ -7,20 +7,21 @@ use App\Models\SupportModel;
 use PDO;
 ?>
 
-<body class="nir"> 
+<div class="nir"> 
     <!-- Navbar -->    
 
     <div class="banere" style="background-image:url(<?=BASEURL?>assets/img/banere.jpg);">
          <img src="" alt="">
             <div class="container">
-                <div class="titreBanere">
-                     <h1> FORMATION MÉDICO-SOCIAL</h1>
-                </div>
+
              </div>   
     </div>
     
     <div class="listeLeçon">
         <div class="container">
+        <div>
+                     <h1> FORMATION MÉDICO-SOCIAL</h1>
+                </div>
                <div class="titreLeçon">   
                 <h2>Liste des documents</h2>   
                </div> 
@@ -138,5 +139,5 @@ use PDO;
             
         </div> 
    
-</body>
+                        </div>
 </html>    

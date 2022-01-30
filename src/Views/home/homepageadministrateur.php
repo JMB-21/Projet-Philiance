@@ -34,7 +34,6 @@
 <?php 
       // echo "baseurl :".BASEURL;
 ?>
-  <p>&nbsp;</p>
 
   <div class="titreleçon">
             <h2>Tableau de Bord Admininistrateur</h2>
