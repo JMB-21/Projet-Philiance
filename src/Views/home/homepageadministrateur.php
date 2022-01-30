@@ -34,11 +34,14 @@
 <?php 
       // echo "baseurl :".BASEURL;
 ?>
-  <p>&nbsp;</p>
 
-  <div class="titreleçon">
-            <h2>Tableau de Bord Admininistrateur</h2>
-  </div>
+  <div class="nir">
+                    <div class="titre_contact">
+                        <div class="titreLeçon">
+                        <h2>Tableau de Bord Admininistrateur</h2>
+                        </div>
+                    </div>
+                </div>
   <div class="grid-admin">  
     <div class="grid-item">
       <div class="grid-docu">

@@ -32,11 +32,12 @@ Managers :
 - CRUD formateurs/auditeurs 
 - CRUD des documents
  -->
- <p>&nbsp;</p>
-
-<div class="titreleçon">
-    <h2>Tableau de Bord Manager</h2>
-</div>
+<div class="nir">
+                    <div class="titre_contact">
+                        <div class="titreLeçon">
+                        <h2>Tableau de Bord Manager</h2>
+                    </div>
+                </div>
 
 <div class="grid-admin">
 
