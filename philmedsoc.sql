@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 29 Janvier 2022 à 18:50
+-- Généré le :  Dim 30 Janvier 2022 à 09:31
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -32,7 +32,8 @@ CREATE TABLE IF NOT EXISTS `biblio` (
   `idrubrik` int(11) NOT NULL,
   `idsupport` int(11) NOT NULL,
   `idauthor` int(11) NOT NULL,
-  `idroitad` int(11) NOT NULL,
+  `idroit` int(11) NOT NULL,
+  `idroitad` tinyint(1) NOT NULL,
   `idroitma` tinyint(1) NOT NULL,
   `idroitfo` tinyint(1) NOT NULL,
   `idroitau` tinyint(1) NOT NULL,
@@ -49,18 +50,18 @@ CREATE TABLE IF NOT EXISTS `biblio` (
   KEY `idsu` (`idsupport`),
   KEY `idauthor` (`idauthor`),
   KEY `idsector` (`idsector`),
-  KEY `idroit` (`idroitad`)
+  KEY `idroit` (`idroit`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `biblio`
 --
 
-INSERT INTO `biblio` (`idb`, `idsector`, `idrubrik`, `idsupport`, `idauthor`, `idroitad`, `idroitma`, `idroitfo`, `idroitau`, `onlin`, `chem`, `titre`, `reference`, `comment`, `creatdate`, `duree`) VALUES
-(1, 1, 5, 10, 3, 4, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/1.pdf', 'L''équilibre alimentaire des personnes agées ', 'EA-03', 'Tous les fondamentaux pour les étudiants en début ...	', '2021-12-29 14:50:13', 60),
-(2, 1, 6, 10, 3, 2, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/5.pdf', 'titre-1', 'EB-05', 'resume-1', '0000-00-00 00:00:00', 30),
-(3, 1, 7, 10, 3, 2, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/6.pdf', 'titre-2', 'TB-04', 'resume-2', '2021-12-29 16:50:13', 45),
-(4, 1, 8, 11, 3, 2, 0, 0, 0, 0, 'https://youtu.be/Z0Ssjy3HkSw', 'titre-3', 'TC-6', 'resume-3', '2021-12-29 16:50:13', 15);
+INSERT INTO `biblio` (`idb`, `idsector`, `idrubrik`, `idsupport`, `idauthor`, `idroit`, `idroitad`, `idroitma`, `idroitfo`, `idroitau`, `onlin`, `chem`, `titre`, `reference`, `comment`, `creatdate`, `duree`) VALUES
+(1, 1, 5, 10, 3, 4, 0, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/1.pdf', 'Lquilibre alimentaire des personnes ag�es ', 'EA-03', 'Tous les fondamentaux pour les ?tudiants en d?but ...	', '2021-12-29 14:50:13', 60),
+(2, 1, 6, 10, 3, 2, 0, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/5.pdf', 'titre-1', 'EB-05', 'resume-1', '0000-00-00 00:00:00', 30),
+(3, 1, 7, 10, 3, 2, 0, 0, 0, 0, 0, 'http://localhost/Projet-Philiance/assets/pdf/6.pdf', 'titre-2', 'TB-04', 'resume-2', '2021-12-29 16:50:13', 45),
+(4, 1, 8, 11, 3, 2, 0, 0, 0, 0, 0, 'https://youtu.be/Z0Ssjy3HkSw', 'titre-3', 'TC-6', 'resume-3', '2021-12-29 16:50:13', 15);
 
 -- --------------------------------------------------------
 
@@ -247,7 +248,7 @@ ALTER TABLE `biblio`
   ADD CONSTRAINT `biblio_ibfk_2` FOREIGN KEY (`idsupport`) REFERENCES `support` (`idsu`),
   ADD CONSTRAINT `biblio_ibfk_3` FOREIGN KEY (`idauthor`) REFERENCES `names` (`idn`),
   ADD CONSTRAINT `biblio_ibfk_4` FOREIGN KEY (`idsector`) REFERENCES `section` (`idsec`),
-  ADD CONSTRAINT `biblio_ibfk_5` FOREIGN KEY (`idroitad`) REFERENCES `rules` (`idr`);
+  ADD CONSTRAINT `biblio_ibfk_5` FOREIGN KEY (`idroit`) REFERENCES `rules` (`idr`);
 
 --
 -- Contraintes pour la table `names`

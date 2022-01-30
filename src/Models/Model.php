@@ -12,7 +12,6 @@ abstract class Model {
 
     /** Connexion à la base de données */
     private static $instance = null;
-
     /** 
      * Singleton permettant d'obtenir un accès à la base de données
      * Crée un accès si aucun accès n'est déjà en cours
@@ -25,11 +24,11 @@ abstract class Model {
                $mot=substr_count(BASEURL,'localhost');              
 
                 if ($mot === 0) {
-                    // echo "distant";
-                    self::$instance = new PDO('mysql:host=db5006433601.hosting-data.io', ' dbu851630', 'philiance22');                     
+                    // echo "distant";                    
+                    self::$instance = new PDO('mysql:host=db5006433601.hosting-data.io;dbname=dbs5354481', 'dbu851630', 'philiance22', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));                                        
                 } else {
                     // echo "local";
-                    self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc', 'root', '');                
+                    self::$instance = new PDO('mysql:host=localhost;dbname=philmedsoc;charset=utf8', 'root', '');                
                 }     
                 
             } catch( PDOException $e) {

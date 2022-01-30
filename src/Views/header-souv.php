@@ -19,7 +19,7 @@
          
           <input type="checkbox" name="rememberme" id="remembercheckbox" />
           <label for="remembercheckbox"> Se souvenir de moi</label>
-          <label for="mdpoublie"><a href="home/mdpoublie">Mot de Passe Oublié ? </a></label>
+          <label for="mdpoublie"><a href="<?=BASEURL?>home/mdpoublie">Mot de Passe Oublié ? </a></label>
           
           <button type="submit" class="btn" name="formconnexion">Connexion</button>  
       
@@ -69,7 +69,7 @@ document.getElementById("myForm").style.display = "none";
       <ul>
         <li><a href="#">Informatique</a></li>
         <li><a href="#">Langues</a></li>
-        <li><a href="#">Métiersssssss</a></li>
+        <li><a href="#">Métiers</a></li>
       </ul>
     </li>
 

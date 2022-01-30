@@ -40,7 +40,7 @@ class DocumentController extends Controller {
     public function modification() {       
                    
         if (isset($_POST)){
-            var_dump($_POST);
+            // var_dump($_POST);           
         }
 
         $template= "edit/editdocument";  
@@ -48,10 +48,13 @@ class DocumentController extends Controller {
         $model      =   new BiblioModel();
         $result     =   $model->updatebiblio();
 
-        // $biblio    =   $result->fetch();
+        $id = $_POST['id'];
+
+        $result     =   $model->find('idb',$id);
+        $biblio    =   $result->fetch();
         
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
-        // $this->render($template, array('biblio' => $biblio));         
+        $this->render($template, array('biblio' => $biblio));         
     }
 
 
@@ -78,9 +81,6 @@ class DocumentController extends Controller {
         // $this->render($template, array('biblio' => $biblio, 'rubrik' => $rubrik,'theme' => $theme)); 
         $this->render($template, array('biblio' => $biblio));         
     }
-
-
-
 
     public function adddocument() {       
                       

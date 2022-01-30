@@ -109,6 +109,40 @@ if(empty($params[0])) {
     }
 
 
+    $mot=substr_count(BASEURL,'localhost');              
+
+    if ($mot === 0) {
+        
+        /* Pour compenser le problème de fonctionnement de l'autoloader distant de composer */
+
+        require ROOT . '/src/Controllers/AdminController.php';
+        require ROOT . '/src/Controllers/AuditeurController.php';
+        require ROOT . '/src/Controllers/BiblioController.php';
+        require ROOT . '/src/Controllers/CategoriesController.php';
+        require ROOT . '/src/Controllers/DeconnexionController.php';
+        require ROOT . '/src/Controllers/DocumentController.php';
+        require ROOT . '/src/Controllers/FormateurController.php';
+        require ROOT . '/src/Controllers/HomeController.php';
+        require ROOT . '/src/Controllers/LessonsController.php';
+        require ROOT . '/src/Controllers/ManagerController.php';
+        require ROOT . '/src/Controllers/NewsController.php';
+        require ROOT . '/src/Controllers/ProfilController.php';
+        require ROOT . '/src/Controllers/RubrikController.php';
+        require ROOT . '/src/Controllers/SectionController.php';
+        require ROOT . '/src/Controllers/ThemeController.php';
+
+        require ROOT . '/src/Models/Model.php';
+        require ROOT . '/src/Models/BiblioModel.php';
+        require ROOT . '/src/Models/CategoriesModel.php';
+        require ROOT . '/src/Models/LessonsModel.php';
+        require ROOT . '/src/Models/NamesModel.php';
+        require ROOT . '/src/Models/RubrikModel.php';
+        require ROOT . '/src/Models/RulesModel.php';
+        require ROOT . '/src/Models/SectionModel.php';
+        require ROOT . '/src/Models/SupportModel.php';
+        require ROOT . '/src/Models/ThemeModel.php'; 
+    }     
+    
 
     // echo "<br><br><br><br><br><br>";
 
