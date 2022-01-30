@@ -1,6 +1,7 @@
 # Activation du module de réécriture d'URL
 
 RewriteEngine On
+RewriteBase /Projet-Philiance
 
 # RewriteRule URL_A_REECRIRE URL_REECRITE
 #

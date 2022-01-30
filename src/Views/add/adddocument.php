@@ -24,15 +24,16 @@
 // var_dump($biblio);
 ?>
 
-<div class="nir">   
 
-    <div class="banere" style="background-image:url(<?=BASEURL?>assets/img/banere.jpg);">
-         <!-- <img src="" alt=""> -->
-            <div class="container">
-                <div class="titreBanere">
-                     <h1> FORMATION MÉDICO-SOCIAL</h1>
-                </div>
-             </div>   
+
+<div class="nir">   
+<p><br><br><br><br><br><br><br><br></p>
+    <div class="banere" style="background-image:url(<?=BASEURL?>assets/img/banere.jpg);">        
+        <div class="container">
+            <div class="titreBanere">
+                <h1> FORMATION MÉDICO-SOCIAL</h1>
+            </div>
+        </div>   
     </div>
     
     <div class="listeLeçon">
@@ -46,21 +47,9 @@
                     <div class="formSupport">
                         <form method="POST" action="<?=BASEURL?>document/ajout" id="docform">                
                             <div>                           
-                                <?php   
-                                // $name = new NamesModel();
-                                // $result = $name->findnameid($biblio['idauthor']);
-                                // $user = $result->fetchall(); 
-
-                                    // if ($_SESSION['role']==1 or $_SESSION['role']==2) {
-                                    // ?>    
-                                    <!-- //     <label for="Txt1" class="formContenu">Auteur : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                  -->
-                                    // <?php    
-                                    // } else {                                   
-                                    // ?>
-                                    <!-- //     <label for="Txt1" class="formContenu">Auteur : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                     -->
-                                    // <?php    
-                                    // }                                                      
-                                ?>                            
+                                                               
+                                <label for="Txt1" class="formContenu">Auteur - <?=$_SESSION["user"]?> : <?=$_SESSION['name']?></label> 
+                                                 
                             </div>
 
                             <div>
@@ -72,38 +61,31 @@
                             </div>  
 
                             <div>
-                                <?php   
-                                
-                                    // $sector = new SectionModel();
-                                    // $result = $sector->findsection($biblio['idsector']);
-                                    // $sector = $result->fetchall();
+                                <?php  
+                                    $model      =   new SectionModel();
+                                    $result     =   $model->findsectionAll();
+                                    $sector    =   $result->fetchall();
+                                    var_dump($sector);
 
-                                    if ($_SESSION['role']==1 or $_SESSION['role']==2) {
-                                    ?>    
-                                        <label for="Txt4" class="formContenu">Secteur:</label>
-                                        <!-- <input id="Txt1" name="Txt1" type="text" value="<?=$sector[0]['group'] ?>"> -->
-                                        <label for="Txt4" class="formContenu">Groupe:</label>
-                                        <!-- <input id="Txt1" name="Txt1" type="text" value="<?=$sector[0]['sector'] ?>"> -->
-                                        <label for="Txt4" class="formContenu">Cours:</label>
-                                        <!-- <input id="Txt1" name="Txt1" type="text" value="<?=$sector[0]['cours'] ?>"> -->
-                                    <?php    
-                                    } else {
-                                        
-                                    ?>
-                                        <!-- <label for="Txt1" class="formContenu">Groupe : <?=$sector[0]['group'] ?></label>  -->
-                                        <!-- <label for="Txt1" class="formContenu">Secteur : <?=$sector[0]['sector'] ?></label>                                     -->
-                                        <!-- <label for="Txt1" class="formContenu">Cours : <?=$sector[0]['cours'] ?></label>                                                                        -->
-                                    <?php    
-                                    }                                                      
                                 ?>  
+
+                                  <label for="Txt4" class="formContenu">Secteur:</label>
+                                
+                                
+                             
+                                      
+                                    
                             </div> 
                                 
                             <div>
+
+
+                           
                                 <?php 
                                 
-                                    $rub = new RubrikModel();                                    
-                                    $result = $rub->findrubrik($biblio['idrubrik']);                                    
-                                    $rub = $result->fetchall(); 
+                                    // $rub = new RubrikModel();                                    
+                                    // $result = $rub->findrubrik($biblio['idrubrik']);                                    
+                                    // $rub = $result->fetchall(); 
 
                                     // if ($_SESSION['role']==1 or $_SESSION['role']==2) {
                                     ?>    
@@ -181,19 +163,19 @@
                             <div>         
                             <?php 
                                 
-                                $sup = new SupportModel();                                    
-                                $result = $sup->findsupport($biblio['idsupport']);                                    
-                                $supor = $result->fetchall(); 
+                                // $sup = new SupportModel();                                    
+                                // $result = $sup->findsupport($biblio['idsupport']);                                    
+                                // $supor = $result->fetchall(); 
                             ?>
                             
                                 <label for="Txt6" class="formContenu">Support:</label> 
-                                <input id="Txt6" name="Txt6" type="text" value="<?=$supor[0]['nom'] ?>"> 
+                                <!-- <input id="Txt6" name="Txt6" type="text" value="<?=$supor[0]['nom'] ?>">  -->
                             </div> 
 
                             <div>
                                 <label for="chbx" class="formContenu">En Ligne :</label> 
-                                <input id="chbx" name="chbx" type="checkbox"  value="<?php echo $biblio['onlin']?>">
-                                <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
+                                <!-- <input id="chbx" name="chbx" type="checkbox"  value="<?php echo $biblio['onlin']?>"> -->
+                                <!-- <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>> -->
                             </div>
 
                             <div class="boutton"> 
@@ -201,8 +183,7 @@
                             </div>
                         </form>
 
-                        <!-- <textarea name="contenu" form="docform" ><?php echo $biblio['comment']?></textarea> -->
-                        <!-- <textarea name="comment" form="usrform">Enter text here...</textarea> -->
+                        
                     </div>    
                 </div>    
             </div> 
