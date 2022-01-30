@@ -60,11 +60,11 @@ use PDO;
                                             switch ($supp['typ']) {
                                                 case 'pdf':
                 ?>                                    
-                                                    <a href="editpdf"><img src="<?=BASEURL?>assets/img/pdf.svg" alt=""></a>
+                                                    <<?=BASEURL?>edit/editpdf"><img src="<?=BASEURL?>assets/img/pdf.svg" alt=""></a>
                 <?php                                    
                                                     break;
                                                 case 'mp4':?>                                     
-                                                    <a href="editvideo"><img src="<?=BASEURL?>assets/img/video.jpg" alt=""></a>    <?php                                    
+                                                    <a href="<?=BASEURL?>edit/editvideo"><img src="<?=BASEURL?>assets/img/video.jpg" alt=""></a>    <?php                                    
                                                     break;
                                                 default:
                                                     
