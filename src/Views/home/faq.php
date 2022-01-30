@@ -1,8 +1,13 @@
-<div class="titreleçon">
-            <h2>questions frequentes</h2>
-        </div>
 
-        <section>
+        <div class="nir">
+                    <div class="titre_contact">
+                        <div class="titreLeçon">
+                            <h2>questions frequentes</h2>
+                        </div>
+                    </div>
+                </div>
+
+
             
         <div class="wrapper">
             <h1>FAQ</h1>
@@ -145,4 +150,3 @@
                 </div>
         </div>
 
-    </section>

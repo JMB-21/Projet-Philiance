@@ -1,6 +1,13 @@
     
     <div class="mleg">
-            <h1>MENTIONS LEGALES</h1>
+    <div class="nir">
+                    <div class="titre_contact">
+                        <div class="titreLeçon">
+                            <h2>MENTIONS LEGALES</h2>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="txt-leg">
                     <dl class="row">
                         <dt class="col-sm-3">ÉDITION</dt>

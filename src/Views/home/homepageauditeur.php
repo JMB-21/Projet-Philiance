@@ -21,11 +21,13 @@ use App\Models\thememodel;
 
 -->
 
-    <p>&nbsp;</p>
 
-    <div class="titreleçon">
-            <h2>Tableau de Bord Auditeur</h2>
-    </div>
+    <div class="nir">
+                    <div class="titre_contact">
+                        <div class="titreLeçon">
+                        <h2>Tableau de Bord Auditeur</h2>                        </div>
+                    </div>
+                </div>
     
     <div class="grid-docu">liste des Documents</div>
         <div class="grid-biblio">
