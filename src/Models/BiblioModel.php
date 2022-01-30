@@ -56,9 +56,9 @@ class BiblioModel extends Model  {
             }
 
             if(isset($_POST['For'])){
-                $For=1;
+                $fm=1;
             }else{
-                $For=0;
+                $fm=0;
             }
 
             if(isset($_POST['Aud'])){
@@ -66,25 +66,21 @@ class BiblioModel extends Model  {
             }else{
                 $aud=0;
             }
+            
 
-        }
 
-        //$sql = "UPDATE {$this->table} SET idroitad=$adm, idroitma=$man, idroitfo=$for, idroitau=$aud,onlin=$onlin,chem=[value-8],`titre`=[value-9],`reference`=[value-10],`comment`=[value-11],`creatdate`=[value-12],`duree`=[value-13]WHERE idb='$id'";       
-        // $sql = "UPDATE {$this->table} SET idb=$_POST['id'],`idroit`=$_POST['id'],`onlin`=[value-7],`chem`=[value-8],`titre`=[value-9],`reference`=[value-10],`comment`=[value-11],`creatdate`=[value-12],`duree`=[value-13]";       
-        // echo $sql;
-        // $requete = $this->getInstance()->prepare($sql);
-        // $requete->execute($data);
+            // $cont = real_escape_string($cont);            
+
+            $Txt0 = $this->getInstance()->quote($Txt0)."\n";
+            echo "<br>Txt0 :".$Txt0."<br>";
+            
+            $sql = "UPDATE {$this->table} SET idroitad='$adm', idroitma='$man', idroitfo='$fm', idroitau='$aud', onlin='$onlin', chem='$Txt8', titre=$Txt0, reference='$Txt2', comment='$cont',duree='$Txt7' WHERE idb='$id'";       
+            echo $sql;        
+            $requete = $this->getInstance()->prepare($sql);  
+            $requete->execute();
     }
-
-    // class RubrikModel extends Model  {
-    
-    //     protected $table = 'rubrik'; 
-    // }
-
-    // class thememodel extends Model  {
-
-    //     protected $table = 'theme'; 
-    // }
+       
+    }        
 
     public function veriftxt($txt) {       
             

@@ -69,7 +69,7 @@ document.getElementById("myForm").style.display = "none";
       <ul>
         <li><a href="#">Informatique</a></li>
         <li><a href="#">Langues</a></li>
-        <li><a href="#">Métiersssssss</a></li>
+        <li><a href="#">Métiers</a></li>
       </ul>
     </li>
 
