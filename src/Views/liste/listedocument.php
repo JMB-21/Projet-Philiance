@@ -49,6 +49,7 @@ use PDO;
                                             
                         foreach ($biblio as $biblio) {
                             ?>
+                            
                                 <div class="col-sm-4 col-md-4">
                                     <div class="title-container">
                                         <div class="img-pdf">
@@ -115,20 +116,28 @@ use PDO;
                                                 ?>
                                                 min</span>
                                             </div>             
-
-                                            <div class="modifSup">
-                                                <form action="edit" method="POST">
-                                                    <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
-                                                    <button type="submit" class="btn btn-success btn-sm mb-2">Modifier</button>
-                                                </form>    
-                                                <form action="edit" method="POST">
-                                                    <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
-                                                    <button type="submit" class="btn btn-success btn-sm mb-2">Supprimer</button>
-                                                </form>  
+     
+                                            <?php
+                                             
+                                                                                              ?>
+                                            
+                                                    <div class="modifSup">
+                                                        <form action="edit" method="POST">
+                                                            <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
+                                                <?php 
                                                 
-            
+?>
+                                                            <button type="submit" class="btn btn-success btn-sm mb-2">Modifier</button>
+                                                        </form>    
+                                                        <form action="edit" method="POST">
+                                                            <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
+                                                            <button type="submit" class="btn btn-success btn-sm mb-2">Supprimer</button>
+                                                        </form>                                               
+                                                    </div>
+
+                                                <?php        
                                                
-                                            </div>
+                                                ?>                                           
                                         </div>
                                     </div>
                                 </div>
@@ -140,4 +149,4 @@ use PDO;
         </div> 
    
                         </div>
-</html>    
+   

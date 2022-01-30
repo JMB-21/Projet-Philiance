@@ -142,26 +142,36 @@
                             <div>
                                 <label for="Txt11" class="formContenu">Droit : 
                                 <?php
+                                    
+                                    $adch="un";
+                                    $mach="un";
+                                    $foch="un";
+                                    $auch="un";
+
                                     switch ($_SESSION['role']) {
-                                        case '1':
+                                        case '1':                                            
+                                            if ($biblio['idroitad']==1){$adch="";}   
+                                            if ($biblio['idroitma']==1){$mach="";}                                         
+                                            if ($biblio['idroitfo']==1){$foch="";}                                       
+                                            if ($biblio['idroitau']==1){$auch="";}                                         
                                 ?>            
-                                            Administrateur <input id="chbx" name="Adm" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
-                                            Manager <input id="chbx" name="Man" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
-                                            Formateur <input id="chbx" name="For" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
-                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="1"></label> 
+                                            Administrateur <input id="chbx" name="Adm" type="checkbox" <?=$adch?>checked >&nbsp;&nbsp;&nbsp;
+                                            Manager <input id="chbx" name="Man" type="checkbox" <?=$mach?>checked >&nbsp;&nbsp;&nbsp;
+                                            Formateur <input id="chbx" name="For" type="checkbox" <?=$foch?>checked >&nbsp;&nbsp;&nbsp;
+                                            Auditeur <input id="chbx" name="Aud" type="checkbox" <?=$auch?>checked ></label> 
                                 <?php
                                             break;
                                         case '2': 
                                 ?>
-                                            Manager <input id="chbx" name="Man" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp;
-                                            Formateur <input id="chbx" name="For" type="checkbox"  value="1">&nbsp;&nbsp;&nbsp; 
-                                            Autiteur <input id="chbx" name="Aud" type="checkbox"  value="1"></label> 
+                                            Manager <input id="chbx" name="Man" type="checkbox"  <?=$adma?>checked>&nbsp;&nbsp;&nbsp;
+                                            Formateur <input id="chbx" name="For" type="checkbox"  <?=$foch?>checked>&nbsp;&nbsp;&nbsp; 
+                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  <?=$auch?>checked></label> 
                                 <?php
                                             break;
                                         case '3':   
                                 ?>           
-                                            Formateur <input id="chbx" name="For" type="checkbox" value="1">&nbsp;&nbsp;&nbsp;  
-                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  value="1"></label>
+                                            Formateur <input id="chbx" name="For" type="checkbox" <?=$foch?>checked>&nbsp;&nbsp;&nbsp;  
+                                            Auditeur <input id="chbx" name="Aud" type="checkbox"  <?=$auch?>checked></label>
                                             
                                 <?php            
                                             break;
@@ -192,7 +202,13 @@
 
                             <div>
                                 <label for="chbx" class="formContenu">En Ligne :</label> 
-                                <input id="chbx" name="chbx" type="checkbox"  value="<?php echo $biblio['onlin']?>">
+
+                                <?php
+                                    $lich="un";                                         
+                                    if ($biblio['onlin']==1){$lich="";} 
+                                ?>
+
+                                <input id="chbx" name="chbx" type="checkbox" <?=$lich?>checked >
                                 <input id="id" name="id" type="hidden" value=<?=$biblio['idb']?>>
                             </div>
 
@@ -208,4 +224,5 @@
             </div> 
         </div> 
     </div> 
+    <div><br><br></div>  
 </div>

@@ -75,7 +75,7 @@ class BiblioModel extends Model  {
             // echo "<br>Txt0 :".$Txt0."<br>";
             
             $sql = "UPDATE {$this->table} SET idroitad= :idroitad, idroitma=:idroitma, idroitfo=:idroitfo, idroitau=:idroitau, onlin=:onlin, chem=:chem, titre=:titre, reference=:reference, comment=:comment,duree=:duree WHERE idb=:idb";       
-            // echo $sql;        
+            echo "Adm :".$adm."//".$sql;        
             $requete = $this->getInstance()->prepare($sql);  
             $requete->execute(array(
                 'idroitad'=>$adm, 
