@@ -33,7 +33,7 @@ class RubrikModel extends Model  {
 
     public function findrubrikall() {      
         
-        $sql = "SELECT * FROM {$this->table}"; 
+        $sql = "SELECT DISTINCT rubrik FROM {$this->table} order by rubrik asc";         
         return $this->getInstance()->query($sql);
     }
 

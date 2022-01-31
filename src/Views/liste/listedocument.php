@@ -45,9 +45,10 @@ use PDO;
                     </div> 
                 </div>    
                 <div class="row listeLeçon">                      
-                    <?php
-                                            
+                                       
+                    <?php                      
                         foreach ($biblio as $biblio) {
+                            
                             ?>
                             
                                 <div class="col-sm-4 col-md-4">
@@ -60,16 +61,35 @@ use PDO;
                                             $supp = $result->fetch();  
                                                                         
                                             switch ($supp['typ']) {
-                                                case 'pdf':
-                ?>                                    
-                                                    <<?=BASEURL?>edit/editpdf"><img src="<?=BASEURL?>assets/img/pdf.svg" alt=""></a>
-                <?php                                    
-                                                    break;
-                                                case 'mp4':?>                                     
-                                                    <a href="<?=BASEURL?>edit/editvideo"><img src="<?=BASEURL?>assets/img/video.jpg" alt=""></a>    <?php                                    
-                                                    break;
-                                                default:
+                                                case 'pdf':               
+                                                ?>    
                                                     
+                                                <form method="POST" action="<?=BASEURL?>document/editpdf">                                                
+
+                                                    <input type="hidden" name="doc" value="<?=$biblio ['chem']?>">
+                                    
+                                                    <input type="image" src="<?=BASEURL?>assets/img/pdf.svg"  width="100" height="100">
+                                                </form>    
+
+
+
+
+
+
+
+                                                    
+                <?php                           
+                
+                
+
+
+                                                    break;
+                                                case 'mp4':
+                                                ?>                                     
+                                                    <a href="<?=BASEURL?>document/editvideo"><img src="<?=BASEURL?>assets/img/video.jpg" alt=""></a>
+                                                <?php                                    
+                                                    break;
+                                                default:                                                    
                                                     break;
                                             } 
             
@@ -82,7 +102,7 @@ use PDO;
                                         </div>
             
                                         <div class="title-detail-container">
-                                            <div class="titreCour"><a href="supports.php?id=<?= $biblio['idb'] ?>" title="">
+                                            <div class="titreCour"><a href="" title="">
                                                     <?php echo $biblio ['titre']; ?>
                                                 </a></div>
                                                                                 

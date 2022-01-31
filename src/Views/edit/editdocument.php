@@ -53,11 +53,11 @@
 
                                     if ($_SESSION['role']==1 or $_SESSION['role']==2) {
                                     ?>    
-                                        <label for="Txt1" class="formContenu">Auteur : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                 
+                                        <label for="Txt1" class="formContenu">Auteur  : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                 
                                     <?php    
                                     } else {                                   
                                     ?>
-                                        <label for="Txt1" class="formContenu">Auteur : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                    
+                                        <label for="Txt1" class="formContenu">Auteur  : <?=$user[0]['prenom']?> <?=$user[0]['nom']?> </label>                                    
                                     <?php    
                                     }                                                      
                                 ?>                            
@@ -163,7 +163,7 @@
                                             break;
                                         case '2': 
                                 ?>
-                                            Manager <input id="chbx" name="Man" type="checkbox"  <?=$adma?>checked>&nbsp;&nbsp;&nbsp;
+                                            Manager <input id="chbx" name="Man" type="checkbox"  <?=$adch?>checked>&nbsp;&nbsp;&nbsp;
                                             Formateur <input id="chbx" name="For" type="checkbox"  <?=$foch?>checked>&nbsp;&nbsp;&nbsp; 
                                             Auditeur <input id="chbx" name="Aud" type="checkbox"  <?=$auch?>checked></label> 
                                 <?php

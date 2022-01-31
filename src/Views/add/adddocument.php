@@ -48,7 +48,7 @@
                         <form method="POST" action="<?=BASEURL?>document/ajout" id="docform">                
                             <div>                           
                                                                
-                                <label for="Txt1" class="formContenu">Auteur - <?=$_SESSION["user"]?> : <?=$_SESSION['name']?></label> 
+                                <label for="Txt1" class="formContenu">Auteur : <?=$_SESSION['name']?></label> 
                                                  
                             </div>
 
@@ -63,29 +63,30 @@
                             <div>
                                 <?php  
                                     $model      =   new SectionModel();
-                                    $result     =   $model->findsectionAll();
+                                    $result     =   $model->findsectionAll();                                   
                                     $sector    =   $result->fetchall();
-                                    var_dump($sector);
-
                                 ?>  
 
-                                  <label for="Txt4" class="formContenu">Secteur:</label>
+                                    <label for="Txt4" class="formContenu">Secteur:</label>
                                 
-                                
-                             
-                                      
-                                    
+                                    <select name="secteur" id="secteur">
+                                      <?php
+                                    foreach ($sector as $sector) { 
+                                        ?>
+                                        <option value=""><?=$sector[0]?></option>
+                                        <?php
+                                    } 
+                                    ?>
+                                    </select>
                             </div> 
-                                
                             <div>
-
-
-                           
                                 <?php 
                                 
                                     // $rub = new RubrikModel();                                    
                                     // $result = $rub->findrubrik($biblio['idrubrik']);                                    
                                     // $rub = $result->fetchall(); 
+
+                                    // var_dump($rub);
 
                                     // if ($_SESSION['role']==1 or $_SESSION['role']==2) {
                                     ?>    

@@ -243,7 +243,7 @@ class HomeController extends Controller {
    
         // Génération d'un MdP temporaire.
 
-        ini_set("sendmail_from","jean-marc-benoist@orange.fr"); 
+        ini_set("sendmail_from","----@free.fr"); 
         
         // Adresse de destination.       
         
@@ -277,8 +277,8 @@ class HomeController extends Controller {
             $sujet = "Votre abonnement à la newsletter Philiance.";
             
             // Header du mail.
-            $header = "From: \"Philiance\"<jean-marc-benoist@orange.fr>".$passage_ligne;
-            $header.= "Reply-to: \"Philiance\" <jean-marc-benoist@orange.fr>".$passage_ligne;
+            $header = "From: \"Philiance\"<----@free.fr>".$passage_ligne;
+            $header.= "Reply-to: \"Philiance\" <---@free.fr>".$passage_ligne;
             $header.= "MIME-Version: 1.0".$passage_ligne;
             $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
             
@@ -299,7 +299,7 @@ class HomeController extends Controller {
             $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
             
             //=====Envoi de l'e-mail.
-            ini_set("SMTP","smtp.orange.fr");
+            ini_set("SMTP","---smtp.free.fr");
             // mail($mail,$sujet,$message,$header);   
 
         

@@ -33,7 +33,7 @@ class SectionModel extends Model  {
 
     public function findSectionAll() {      
         
-        $sql = "SELECT * FROM {$this->table}"; 
+        $sql = "SELECT DISTINCT sector FROM {$this->table} order by sector asc";         
         return $this->getInstance()->query($sql);
     }
 
